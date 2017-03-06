@@ -3,9 +3,10 @@
 }
 
 body {
-	background-color: #000;
+	background-color: red;
 }
 
 .grid {
-	border-color: #fff;
+  padding: 15px;
+  border: 1px solid #000;
 }
