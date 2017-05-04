@@ -1,3 +1,3 @@
 ## Tic Tac Toe 
 
-[http://codepen.io/cjszcz17/pen/yMvBqV](http://codepen.io/cjszcz17/pen/yMvBqV)
+[http://christophszcz.github.io/ticTacToeV2/](http://christophszcz.github.io/ticTacToeV2/)
