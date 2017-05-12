@@ -2,6 +2,11 @@ body {
 	background-color: #000;
 }
 
+.title{
+  text-align: center;
+  margin-top: 40px;
+}
+
 .grid {
 	margin-top: 100px;
   margin-left: 500px;
@@ -10,6 +15,8 @@ body {
 }
 
 .box {
+  font-size: 50px;
+  text-align: center;
   padding: 25px;
   border: 1px solid #fff;
   height: 122px;
