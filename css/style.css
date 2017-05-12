@@ -5,6 +5,8 @@ body {
 .title{
   text-align: center;
   margin-top: 40px;
+  font-family: 'chalk-font';
+  color: #fff;
 }
 
 .grid {
@@ -20,6 +22,8 @@ body {
   padding: 25px;
   border: 1px solid #fff;
   height: 122px;
+  font-family: 'chalk-font';
+  color: #fff;
 }
 
 .col-md-4{
@@ -41,4 +45,8 @@ body {
 #x-button, #y-button{
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+@font-face{  font-family:'chalk-font';  
+  src: url('../fonts/SqueakyChalkSound.ttf'); 
 }
