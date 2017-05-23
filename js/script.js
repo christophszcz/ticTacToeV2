@@ -6,13 +6,21 @@ var User = {
 	'selection' : 'X'
 };
 
+var Computer = {
+	'selection' : 'O'
+};
+
+// Choosing a box
+
 $('#x-button').click(function(){
 	User.selection = 'X';
+	Computer.selection = 'O';
 	$('#myModal').modal('toggle');
 });
 
 $('#o-button').click(function(){
 	User.selection = 'O';
+	Computer.selection = 'X';
 	$('#myModal').modal('toggle');
 });
 
@@ -69,3 +77,5 @@ $('#box9').click(function(){
 		$( "#box9" ).append( User.selection);
 	}
 });
+
+//Simple A.I.
