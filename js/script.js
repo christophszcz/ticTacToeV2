@@ -26,90 +26,104 @@ $('#o-button').click(function(){
 	$('#myModal').modal('toggle');
 });
 
-$('#box1').click(function(){
-	if ($('#box1').is(':empty')){
-		$( "#box1" ).append(User.selection);
-	}
-});
+if(User.turn){
+	$('#box1').click(function(){
+		if ($('#box1').is(':empty')){
+			$( "#box1" ).append(User.selection);
+		}
+	});
+
+	$('#box2').click(function(){
+		if ($('#box2').is(':empty')){
+			$( "#box2" ).append( User.selection);
+		}
+	});
+
+	$('#box3').click(function(){
+		if ($('#box3').is(':empty')){
+			$( "#box3" ).append( User.selection);
+		}
+	});
+
+	$('#box4').click(function(){
+		if ($('#box4').is(':empty')){
+			$( "#box4" ).append( User.selection);
+		}
+	});
+
+	$('#box5').click(function(){
+		if ($('#box5').is(':empty')){
+			$( "#box5" ).append( User.selection);
+		}
+	});
+
+	$('#box6').click(function(){
+		if ($('#box6').is(':empty')){
+			$( "#box6" ).append( User.selection);
+		}
+	});
+
+	$('#box7').click(function(){
+		if ($('#box7').is(':empty')){
+			$( "#box7" ).append( User.selection);
+		}
+	});
+
+	$('#box8').click(function(){
+		if ($('#box8').is(':empty')){
+			$( "#box8" ).append( User.selection);
+		}
+	});
+
+	$('#box9').click(function(){
+		if ($('#box9').is(':empty')){
+			$( "#box9" ).append( User.selection);
+		}
+	});
+
+	User.turn = false;
+	Computer.turn = true;
+}
  
-$('#box2').click(function(){
-	if ($('#box2').is(':empty')){
-		$( "#box2" ).append( User.selection);
-	}
-});
-
-$('#box3').click(function(){
-	if ($('#box3').is(':empty')){
-		$( "#box3" ).append( User.selection);
-	}
-});
-
-$('#box4').click(function(){
-	if ($('#box4').is(':empty')){
-		$( "#box4" ).append( User.selection);
-	}
-});
-
-$('#box5').click(function(){
-	if ($('#box5').is(':empty')){
-		$( "#box5" ).append( User.selection);
-	}
-});
-
-$('#box6').click(function(){
-	if ($('#box6').is(':empty')){
-		$( "#box6" ).append( User.selection);
-	}
-});
-
-$('#box7').click(function(){
-	if ($('#box7').is(':empty')){
-		$( "#box7" ).append( User.selection);
-	}
-});
-
-$('#box8').click(function(){
-	if ($('#box8').is(':empty')){
-		$( "#box8" ).append( User.selection);
-	}
-});
-
-$('#box9').click(function(){
-	if ($('#box9').is(':empty')){
-		$( "#box9" ).append( User.selection);
-	}
-});
-
 //A.I. Algorithm
 
-$(".box").click(function(){
-	if ($('#box2').is(':empty')){
-		setTimeout(function() {
-		  $( "#box2" ).append(Computer.selection);
-		}, 1000);
-	}
-});
+if(Computer.turn){
+	$(".box").click(function(){
+		if ($('#box2').is(':empty')){
+			setTimeout(function() {
+			  $( "#box2" ).append(Computer.selection);
+			}, 1000);
+		} else if ($('#box3').is(':empty')){
+			setTimeout(function() {
+			  $( "#box3" ).append(Computer.selection);
+			}, 1000);
+		} else if ($('#box4').is(':empty')){
+			setTimeout(function() {
+			  $( "#box4" ).append(Computer.selection);
+			}, 1000);
+		} else if ($('#box5').is(':empty')){
+			setTimeout(function() {
+			 	$( "#box5" ).append(Computer.selection);
+			}, 1000);
+		} else if ($('#box6').is(':empty')){
+			setTimeout(function() {
+			 	$( "#box6" ).append(Computer.selection);
+			}, 1000);
+		} else if ($('#box7').is(':empty')){
+			setTimeout(function() {
+			 	$( "#box7" ).append(Computer.selection);
+			}, 1000);
+		} else if ($('#box8').is(':empty')){
+			setTimeout(function() {
+			 	$( "#box8" ).append(Computer.selection);
+			}, 1000);
+		} else if ($('#box9').is(':empty')){
+			setTimeout(function() {
+			 	$( "#box9" ).append(Computer.selection);
+			}, 1000);
+		}
 
-$("#box3").click(function(){
-	if ($('#box4').is(':empty')){
-		setTimeout(function() {
-		  $( "#box4" ).append(Computer.selection);
-		}, 1000);
-	}
-});
-
-$("#box5").click(function(){
-	if ($('#box6').is(':empty')){
-		setTimeout(function() {
-		 	$( "#box6" ).append(Computer.selection);
-		}, 1000);
-	}
-});
-
-$("#box7").click(function(){
-	if ($('#box8').is(':empty')){
-		setTimeout(function() {
-			$( "#box8" ).append(Computer.selection);
-		}, 1000);
-	}
-});
+		User.turn = true;
+		Computer.turn = false;	 
+	});
+}
