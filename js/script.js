@@ -3,11 +3,13 @@ $(document).ready(function(){
 });
 
 var User = {
-	'selection' : 'X'
+	'selection' : 'X',
+	'turn' : true
 };
 
 var Computer = {
-	'selection' : 'O'
+	'selection' : 'O',
+	'turn' : false
 };
 
 // Choosing a box
@@ -80,7 +82,7 @@ $('#box9').click(function(){
 
 //A.I. Algorithm
 
-$("#box1").click(function(){
+$(".box").click(function(){
 	if ($('#box2').is(':empty')){
 		setTimeout(function() {
 		  $( "#box2" ).append(Computer.selection);
