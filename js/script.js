@@ -78,28 +78,36 @@ $('#box9').click(function(){
 	}
 });
 
-//Simple A.I.
+//A.I. Algorithm
 
 $("#box1").click(function(){
 	if ($('#box2').is(':empty')){
-		$( "#box2" ).append(Computer.selection);
+		setTimeout(function() {
+		  $( "#box2" ).append(Computer.selection);
+		}, 1000);
 	}
 });
 
 $("#box3").click(function(){
 	if ($('#box4').is(':empty')){
-		$( "#box4" ).append(Computer.selection);
+		setTimeout(function() {
+		  $( "#box4" ).append(Computer.selection);
+		}, 1000);
 	}
 });
 
 $("#box5").click(function(){
 	if ($('#box6').is(':empty')){
-		$( "#box6" ).append(Computer.selection);
+		setTimeout(function() {
+		 	$( "#box6" ).append(Computer.selection);
+		}, 1000);
 	}
 });
 
 $("#box7").click(function(){
 	if ($('#box8').is(':empty')){
-		$( "#box8" ).append(Computer.selection);
+		setTimeout(function() {
+			$( "#box8" ).append(Computer.selection);
+		}, 1000);
 	}
 });
