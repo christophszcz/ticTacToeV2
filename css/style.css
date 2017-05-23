@@ -1,6 +1,5 @@
 html{
   border: 30px solid brown;
-  max-height: 600px;
 }
 
 body {
@@ -16,10 +15,14 @@ body {
 
 .grid {
   margin-top: 30px;
-  margin-left: 500px;
-  margin-right: 500px;
-  margin-bottom: 500px;
+  margin-bottom: 50px;
   cursor: pointer;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .box {
@@ -30,6 +33,7 @@ body {
   height: 122px;
   font-family: 'chalk-font';
   color: #fff;
+  width: 102px;
 }
 
 .col-md-4{
