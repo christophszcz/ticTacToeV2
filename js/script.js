@@ -79,3 +79,19 @@ $('#box9').click(function(){
 });
 
 //Simple A.I.
+
+$("#box1").click(function(){
+	$( "#box2" ).append(Computer.selection);
+});
+
+$("#box3").click(function(){
+	$( "#box4" ).append(Computer.selection);
+});
+
+$("#box5").click(function(){
+	$( "#box6" ).append(Computer.selection);
+});
+
+$("#box7").click(function(){
+	$( "#box8" ).append(Computer.selection);
+});
