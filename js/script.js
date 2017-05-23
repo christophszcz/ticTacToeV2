@@ -98,16 +98,15 @@ if(User.turn){
 
 if(Computer.turn){
 	$(".box").click(function(){
-		for (var i = 1; i < 10; i ++){
+		for (var i = 1; i < 10; i ++){ //Two in a row
 			if ( !($("#box" + i).is(':empty'))  && !($("#box" + i + 1).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
-				setTimeout(function() {
-			  	$( "#box" + (i + 2) ).append(Computer.selection);
-				}, 1000);
-				return;
-			}
-			// User.turn = true;
-			// Computer.turn = false;
-			 
+				if ($("#box" + (i + 2)).is(':empty')){
+					setTimeout(function() {
+				  	$( "#box" + (i + 2) ).append(Computer.selection);
+					}, 1000);
+					return;
+				}
+			}		 
 		}
 
 		if ($('#box2').is(':empty')){
