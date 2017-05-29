@@ -1,10 +1,9 @@
-$(document).ready(function(){
-	$('#myModal').modal('show');
-
+if(User.turn){
 	$('#box1').click(function(){
 		if ($('#box1').is(':empty')){
 			$( "#box1" ).append(User.selection);
 			$( "#box1" ).attr("value", User.selection);
+			checkIfWin();
 		}
 		$( "#box1" ).off('click');
 	});
@@ -74,28 +73,6 @@ $(document).ready(function(){
 	});
 	User.turn = false;
 	Computer.turn = true;
-});
-
-var User = {
-	'selection' : 'X',
-	'turn' : true
-};
-
-var Computer = {
-	'selection' : 'O',
-	'turn' : false
-};
-
-// Choosing a box
-
-$('#x-button').click(function(){
-	User.selection = 'X';
-	Computer.selection = 'O';
-	$('#myModal').modal('toggle');
-});
-
-$('#o-button').click(function(){
-	User.selection = 'O';
-	Computer.selection = 'X';
-	$('#myModal').modal('toggle');
-});
+	console.log('Click');
+	//win game if 3 in a horizontal row are the same
+}

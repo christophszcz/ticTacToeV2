@@ -15,7 +15,7 @@ body {
 
 .grid {
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
@@ -69,6 +69,8 @@ body {
   background-color: #fff;
   position:relative;
   padding:15px;
+  margin-left: 20px;
+  margin-right: 20px;
   -webkit-border-radius:15px;
   -moz-border-radius:15px;
   border-radius:15px;
