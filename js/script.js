@@ -7,6 +7,8 @@ $(document).ready(function(){
 			$( "#box1" ).attr("value", User.selection);
 		}
 		$( "#box1" ).off('click');
+		User.turn = false;
+		Computer.turn = true;
 	});
 
 	$('#box2').click(function(){
@@ -15,6 +17,8 @@ $(document).ready(function(){
 			$( "#box2" ).attr("value", User.selection);
 		}
 		$( "#box2" ).off('click');
+		User.turn = false;
+		Computer.turn = true;
 	});
 
 	$('#box3').click(function(){
@@ -23,6 +27,8 @@ $(document).ready(function(){
 			$( "#box3" ).attr("value", User.selection);
 		}
 		$( "#box3" ).off('click');
+		User.turn = false;
+		Computer.turn = true;
 	});
 
 	$('#box4').click(function(){
@@ -31,6 +37,8 @@ $(document).ready(function(){
 			$( "#box4" ).attr("value", User.selection);
 		}
 		$( "#box4" ).off('click');
+		User.turn = false;
+		Computer.turn = true;
 	});
 
 	$('#box5').click(function(){
@@ -39,6 +47,8 @@ $(document).ready(function(){
 			$( "#box5" ).attr("value", User.selection);
 		}
 		$( "#box5" ).off('click');
+		User.turn = false;
+		Computer.turn = true;
 	});
 
 	$('#box6').click(function(){
@@ -47,6 +57,8 @@ $(document).ready(function(){
 			$( "#box6" ).attr("value", User.selection);
 		}
 		$( "#box6" ).off('click');
+		User.turn = false;
+		Computer.turn = true;
 	});
 
 	$('#box7').click(function(){
@@ -55,6 +67,8 @@ $(document).ready(function(){
 			$( "#box7" ).attr("value", User.selection);
 		}
 		$( "#box7" ).off('click');
+		User.turn = false;
+		Computer.turn = true;
 	});
 
 	$('#box8').click(function(){
@@ -63,6 +77,8 @@ $(document).ready(function(){
 			$( "#box8" ).attr("value", User.selection);
 		}
 		$( "#box8" ).off('click');
+		User.turn = false;
+		Computer.turn = true;
 	});
 
 	$('#box9').click(function(){
@@ -71,9 +87,9 @@ $(document).ready(function(){
 			$( "#box9" ).attr("value", User.selection);
 		}
 		$( "#box9" ).off('click');
+		User.turn = false;
+		Computer.turn = true;
 	});
-	User.turn = false;
-	Computer.turn = true;
 });
 
 var User = {

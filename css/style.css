@@ -43,6 +43,12 @@ body {
 
 /* Modal */
 
+@media (min-width: 768px){
+  .modal-dialog {
+    width: 345px;
+  }
+}
+
 .modal-body{
   display: flex;
   justify-content: center;
