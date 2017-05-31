@@ -1,4 +1,4 @@
-if(User.turn){
+if(User.turn && User.move >= 1){
 	$('#box1').click(function(){
 		if ($('#box1').is(':empty')){
 			$( "#box1" ).append(User.selection);

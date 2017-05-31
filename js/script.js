@@ -2,17 +2,18 @@ $(document).ready(function(){
 	$('#myModal').modal('show');
 
 	$('#box1').click(function(){
-		if ($('#box1').is(':empty')){
+		if ($('#box1').is(':empty') && User.turn === true){
 			$( "#box1" ).append(User.selection);
 			$( "#box1" ).attr("value", User.selection);
 		}
 		$( "#box1" ).off('click');
 		User.turn = false;
 		Computer.turn = true;
+		User.move ++;
 	});
 
 	$('#box2').click(function(){
-		if ($('#box2').is(':empty')){
+		if ($('#box2').is(':empty') && User.turn === true){
 			$( "#box2" ).append( User.selection);
 			$( "#box2" ).attr("value", User.selection);
 		}
@@ -22,7 +23,7 @@ $(document).ready(function(){
 	});
 
 	$('#box3').click(function(){
-		if ($('#box3').is(':empty')){
+		if ($('#box3').is(':empty') && User.turn === true){
 			$( "#box3" ).append( User.selection);
 			$( "#box3" ).attr("value", User.selection);
 		}
@@ -32,7 +33,7 @@ $(document).ready(function(){
 	});
 
 	$('#box4').click(function(){
-		if ($('#box4').is(':empty')){
+		if ($('#box4').is(':empty') && User.turn === true){
 			$( "#box4" ).append( User.selection);
 			$( "#box4" ).attr("value", User.selection);
 		}
@@ -42,7 +43,7 @@ $(document).ready(function(){
 	});
 
 	$('#box5').click(function(){
-		if ($('#box5').is(':empty')){
+		if ($('#box5').is(':empty') && User.turn === true){
 			$( "#box5" ).append( User.selection);
 			$( "#box5" ).attr("value", User.selection);
 		}
@@ -52,7 +53,7 @@ $(document).ready(function(){
 	});
 
 	$('#box6').click(function(){
-		if ($('#box6').is(':empty')){
+		if ($('#box6').is(':empty') && User.turn === true){
 			$( "#box6" ).append( User.selection);
 			$( "#box6" ).attr("value", User.selection);
 		}
@@ -62,7 +63,7 @@ $(document).ready(function(){
 	});
 
 	$('#box7').click(function(){
-		if ($('#box7').is(':empty')){
+		if ($('#box7').is(':empty') && User.turn === true){
 			$( "#box7" ).append( User.selection);
 			$( "#box7" ).attr("value", User.selection);
 		}
@@ -72,7 +73,7 @@ $(document).ready(function(){
 	});
 
 	$('#box8').click(function(){
-		if ($('#box8').is(':empty')){
+		if ($('#box8').is(':empty') && User.turn === true){
 			$( "#box8" ).append( User.selection);
 			$( "#box8" ).attr("value", User.selection);
 		}
@@ -82,7 +83,7 @@ $(document).ready(function(){
 	});
 
 	$('#box9').click(function(){
-		if ($('#box9').is(':empty')){
+		if ($('#box9').is(':empty') && User.turn === true){
 			$( "#box9" ).append( User.selection);
 			$( "#box9" ).attr("value", User.selection);
 		}
@@ -94,12 +95,14 @@ $(document).ready(function(){
 
 var User = {
 	'selection' : 'X',
-	'turn' : true
+	'turn' : true,
+	'move': 0
 };
 
 var Computer = {
 	'selection' : 'O',
-	'turn' : false
+	'turn' : false,
+	'move': 0
 };
 
 // Choosing a box
