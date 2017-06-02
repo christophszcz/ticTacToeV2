@@ -1,4 +1,4 @@
-//Winning combinations
+// Check if 3 in a row!
 
 function checkIfWin(){
 	if( !($('#box1').is(':empty'))  &&  $("#box1").attr("value") ===  $("#box4").attr("value")  &&  ($("#box4").attr("value") ===  $("#box7").attr("value")) ){

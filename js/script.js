@@ -6,6 +6,7 @@ $(document).ready(function(){
 			$( "#box1" ).append(User.selection);
 			$( "#box1" ).attr("value", User.selection);
 			computersTurn();
+			checkIfWin();
 		}
 		$( "#box1" ).off('click');
 	});
@@ -15,6 +16,7 @@ $(document).ready(function(){
 			$( "#box2" ).append( User.selection);
 			$( "#box2" ).attr("value", User.selection);
 			computersTurn();
+			checkIfWin();
 		}
 		$( "#box2" ).off('click');
 	});
@@ -24,6 +26,7 @@ $(document).ready(function(){
 			$( "#box3" ).append( User.selection);
 			$( "#box3" ).attr("value", User.selection);
 			computersTurn();
+			checkIfWin();
 		}
 		$( "#box3" ).off('click');
 	});
@@ -33,6 +36,7 @@ $(document).ready(function(){
 			$( "#box4" ).append( User.selection);
 			$( "#box4" ).attr("value", User.selection);
 			computersTurn();
+			checkIfWin();
 		}
 		$( "#box4" ).off('click');
 	});
@@ -42,6 +46,7 @@ $(document).ready(function(){
 			$( "#box5" ).append( User.selection);
 			$( "#box5" ).attr("value", User.selection);
 			computersTurn();
+			checkIfWin();
 		}
 		$( "#box5" ).off('click');
 	});
@@ -51,6 +56,7 @@ $(document).ready(function(){
 			$( "#box6" ).append( User.selection);
 			$( "#box6" ).attr("value", User.selection);
 			computersTurn();
+			checkIfWin();
 		}
 		$( "#box6" ).off('click');
 	});
@@ -60,6 +66,7 @@ $(document).ready(function(){
 			$( "#box7" ).append( User.selection);
 			$( "#box7" ).attr("value", User.selection);
 			computersTurn();
+			checkIfWin();
 		}
 		$( "#box7" ).off('click');
 	});
@@ -69,6 +76,7 @@ $(document).ready(function(){
 			$( "#box8" ).append( User.selection);
 			$( "#box8" ).attr("value", User.selection);
 			computersTurn();
+			checkIfWin();
 		}
 		$( "#box8" ).off('click');
 	});
@@ -78,6 +86,7 @@ $(document).ready(function(){
 			$( "#box9" ).append( User.selection);
 			$( "#box9" ).attr("value", User.selection);
 			computersTurn();
+			checkIfWin();
 		}
 		$( "#box9" ).off('click');
 	});
