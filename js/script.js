@@ -7,10 +7,7 @@ $(document).ready(function(){
 			$( "#box1" ).attr("value", User.selection);
 		}
 		$( "#box1" ).off('click');
-		User.turn = false;
-		Computer.turn = true;
-		User.move ++;
-		computerMove();
+		computersTurn();
 	});
 
 	$('#box2').click(function(){
@@ -19,10 +16,7 @@ $(document).ready(function(){
 			$( "#box2" ).attr("value", User.selection);
 		}
 		$( "#box2" ).off('click');
-		User.turn = false;
-		Computer.turn = true;
-		User.move ++;
-		computerMove();
+		computersTurn();
 	});
 
 	$('#box3').click(function(){
@@ -31,10 +25,7 @@ $(document).ready(function(){
 			$( "#box3" ).attr("value", User.selection);
 		}
 		$( "#box3" ).off('click');
-		User.turn = false;
-		Computer.turn = true;
-		User.move ++;
-		computerMove();
+		computersTurn();
 	});
 
 	$('#box4').click(function(){
@@ -43,10 +34,7 @@ $(document).ready(function(){
 			$( "#box4" ).attr("value", User.selection);
 		}
 		$( "#box4" ).off('click');
-		User.turn = false;
-		Computer.turn = true;
-		User.move ++;
-		computerMove();
+		computersTurn();
 	});
 
 	$('#box5').click(function(){
@@ -55,10 +43,7 @@ $(document).ready(function(){
 			$( "#box5" ).attr("value", User.selection);
 		}
 		$( "#box5" ).off('click');
-		User.turn = false;
-		Computer.turn = true;
-		User.move ++;
-		computerMove();
+		computersTurn();
 	});
 
 	$('#box6').click(function(){
@@ -67,10 +52,7 @@ $(document).ready(function(){
 			$( "#box6" ).attr("value", User.selection);
 		}
 		$( "#box6" ).off('click');
-		User.turn = false;
-		Computer.turn = true;
-		User.move ++;
-		computerMove();
+		computersTurn();
 	});
 
 	$('#box7').click(function(){
@@ -79,10 +61,7 @@ $(document).ready(function(){
 			$( "#box7" ).attr("value", User.selection);
 		}
 		$( "#box7" ).off('click');
-		User.turn = false;
-		Computer.turn = true;
-		User.move ++;
-		computerMove();
+		computersTurn();
 	});
 
 	$('#box8').click(function(){
@@ -91,10 +70,7 @@ $(document).ready(function(){
 			$( "#box8" ).attr("value", User.selection);
 		}
 		$( "#box8" ).off('click');
-		User.turn = false;
-		Computer.turn = true;
-		User.move ++;
-		computerMove();
+		computersTurn();
 	});
 
 	$('#box9').click(function(){
@@ -103,10 +79,7 @@ $(document).ready(function(){
 			$( "#box9" ).attr("value", User.selection);
 		}
 		$( "#box9" ).off('click');
-		User.turn = false;
-		Computer.turn = true;
-		User.move ++;
-		computerMove();
+		computersTurn();
 	});
 });
 
@@ -135,3 +108,12 @@ $('#o-button').click(function(){
 	Computer.selection = 'X';
 	$('#myModal').modal('toggle');
 });
+
+//Computer's turn
+
+function computersTurn(){
+	User.turn = false;
+	Computer.turn = true;
+	User.move ++;
+	computerMove();
+}
