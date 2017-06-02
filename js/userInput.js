@@ -3,7 +3,7 @@ if(User.turn && User.move >= 1){
 		if ($('#box1').is(':empty')){
 			$( "#box1" ).append(User.selection);
 			$( "#box1" ).attr("value", User.selection);
-			checkIfWin();
+			// checkIfWin();
 		}
 		$( "#box1" ).off('click');
 	});

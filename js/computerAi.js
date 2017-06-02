@@ -1,23 +1,13 @@
 //A.I. Algorithm
 
-if(Computer.turn){
-	$(".box").click(function(){
-		for (var i = 1; i < 10; i ++){ //Two in a row
-			if ( !($("#box" + i).is(':empty'))  && !($("#box" + i + 1).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
-				if ($("#box" + (i + 2)).is(':empty')){
-					setTimeout(function() {
-				  	$( "#box" + (i + 2) ).append(Computer.selection);
-					}, 1000);
-					return;
-				}
-			}		 
-		}
+function computerMove(){
+	if(Computer.turn){
 
 		if ($('#box2').is(':empty')){
 			setTimeout(function() {
 			  $( "#box2" ).append(Computer.selection);
 			  $( "#box2" ).attr("value", Computer.selection);
-			}, 10000);
+			}, 1000);
 		} else if ($('#box3').is(':empty')){
 			setTimeout(function() {
 			  $( "#box3" ).append(Computer.selection);
@@ -57,5 +47,5 @@ if(Computer.turn){
 
 		User.turn = true;
 		Computer.turn = false;	 
-	});
-}
+	}
+};

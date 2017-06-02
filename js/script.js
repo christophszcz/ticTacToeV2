@@ -10,6 +10,7 @@ $(document).ready(function(){
 		User.turn = false;
 		Computer.turn = true;
 		User.move ++;
+		computerMove();
 	});
 
 	$('#box2').click(function(){
@@ -20,6 +21,8 @@ $(document).ready(function(){
 		$( "#box2" ).off('click');
 		User.turn = false;
 		Computer.turn = true;
+		User.move ++;
+		computerMove();
 	});
 
 	$('#box3').click(function(){
@@ -30,6 +33,8 @@ $(document).ready(function(){
 		$( "#box3" ).off('click');
 		User.turn = false;
 		Computer.turn = true;
+		User.move ++;
+		computerMove();
 	});
 
 	$('#box4').click(function(){
@@ -40,6 +45,8 @@ $(document).ready(function(){
 		$( "#box4" ).off('click');
 		User.turn = false;
 		Computer.turn = true;
+		User.move ++;
+		computerMove();
 	});
 
 	$('#box5').click(function(){
@@ -50,6 +57,8 @@ $(document).ready(function(){
 		$( "#box5" ).off('click');
 		User.turn = false;
 		Computer.turn = true;
+		User.move ++;
+		computerMove();
 	});
 
 	$('#box6').click(function(){
@@ -60,6 +69,8 @@ $(document).ready(function(){
 		$( "#box6" ).off('click');
 		User.turn = false;
 		Computer.turn = true;
+		User.move ++;
+		computerMove();
 	});
 
 	$('#box7').click(function(){
@@ -70,6 +81,8 @@ $(document).ready(function(){
 		$( "#box7" ).off('click');
 		User.turn = false;
 		Computer.turn = true;
+		User.move ++;
+		computerMove();
 	});
 
 	$('#box8').click(function(){
@@ -80,6 +93,8 @@ $(document).ready(function(){
 		$( "#box8" ).off('click');
 		User.turn = false;
 		Computer.turn = true;
+		User.move ++;
+		computerMove();
 	});
 
 	$('#box9').click(function(){
@@ -90,6 +105,8 @@ $(document).ready(function(){
 		$( "#box9" ).off('click');
 		User.turn = false;
 		Computer.turn = true;
+		User.move ++;
+		computerMove();
 	});
 });
 
