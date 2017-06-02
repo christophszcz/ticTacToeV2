@@ -9,7 +9,7 @@ body {
 
 .title{
   text-align: center;
-  margin-top: 40px;
+  margin-top: 15px;
   font-family: 'chalk-font';
   color: #fff;
 }
@@ -81,6 +81,7 @@ body {
   -webkit-border-radius:15px;
   -moz-border-radius:15px;
   border-radius:15px;
+  display:hidden;
 }
 
 .speech-bubble:before {
