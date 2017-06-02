@@ -2,8 +2,12 @@
 
 function computerMove(){
 	if(Computer.turn){
-
-		if ($('#box2').is(':empty')){
+		if ($('#box1').is(':empty')){
+			setTimeout(function() {
+			  $( "#box1" ).append(Computer.selection);
+			  $( "#box1" ).attr("value", Computer.selection);
+			}, 1000);
+		} else if ($('#box2').is(':empty')){
 			setTimeout(function() {
 			  $( "#box2" ).append(Computer.selection);
 			  $( "#box2" ).attr("value", Computer.selection);
