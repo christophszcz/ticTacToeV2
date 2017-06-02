@@ -4,6 +4,9 @@ function checkIfWin(){
 	if( !($('#box1').is(':empty'))  &&  $("#box1").attr("value") ===  $("#box4").attr("value")  &&  ($("#box4").attr("value") ===  $("#box7").attr("value")) ){
 		alert($("#box4").attr("value") + ' has won the game!');
 		endTheGame();
+	} else if( !($('#box2').is(':empty'))  &&  $("#box2").attr("value") ===  $("#box5").attr("value")  &&  ($("#box5").attr("value") ===  $("#box8").attr("value")) ){
+		alert($("#box5").attr("value") + ' has won the game!');
+		endTheGame();
 	}
 }
 
