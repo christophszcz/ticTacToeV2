@@ -65,8 +65,8 @@ $(document).ready(function(){
 		if ($('#box7').is(':empty') && $("#box7").attr("value").length < 1){
 			$( "#box7" ).append( User.selection);
 			$( "#box7" ).attr("value", User.selection);
-			computersTurn();
 			checkIfWin();
+			computersTurn();
 		}
 		$( "#box7" ).off('click');
 	});
