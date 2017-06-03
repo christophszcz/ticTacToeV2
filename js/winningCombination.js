@@ -19,6 +19,9 @@ function checkIfWin(){
 	} else if( !($('#box7').is(':empty'))  &&  $("#box7").attr("value") ===  $("#box8").attr("value")  &&  ($("#box8").attr("value") ===  $("#box9").attr("value")) ){
 		document.getElementById('speech-bubble-id').insertAdjacentHTML("afterbegin", "<div id='winner-text'>" + $("#box7").attr("value") + " has won the game! " + "<a href='#' onclick='location.reload();'>Play Again</a>" + "</div>");
 		endTheGame();
+	} else if( !($('#box1').is(':empty'))  &&  $("#box1").attr("value") ===  $("#box5").attr("value")  &&  ($("#box5").attr("value") ===  $("#box9").attr("value")) ){
+		document.getElementById('speech-bubble-id').insertAdjacentHTML("afterbegin", "<div id='winner-text'>" + $("#box1").attr("value") + " has won the game! " + "<a href='#' onclick='location.reload();'>Play Again</a>" + "</div>");
+		endTheGame();
 	}
 }
 
