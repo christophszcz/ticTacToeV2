@@ -15,6 +15,18 @@ function computerMove(){
 			}		 
 		}
 
+		for (var j = 1; j < 10; j ++){ //Block two in a vertical row 
+			if ( !($("#box" + j).is(':empty'))  && !($("#box" + i + 3).is(':empty')) && ($("#box" + j).attr("value") ===  $("#box" + (i + 3)).attr("value")) ){
+				if ($("#box" + (i + 6)).is(':empty')){
+					setTimeout(function() {
+				  	$( "#box" + (i + 6) ).append(Computer.selection);
+					}, 1000);
+					$( "#box" + (i + 6) ).attr("value", Computer.selection);
+					return;
+				}
+			}		 
+		}
+
 		if ($('#box1').is(':empty') && Computer.turn === true && $("#box1").attr("value").length < 1 ){
 			setTimeout(function() {
 			  $( "#box1" ).append(Computer.selection);
