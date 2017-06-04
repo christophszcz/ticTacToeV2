@@ -2,16 +2,19 @@
 
 function computerMove(){
 	if(Computer.turn){
-		for (var i = 1; i < 10; i ++){ //Two in a row
+
+		for (var i = 1; i < 10; i ++){ //Block two in a horizontal row 
 			if ( !($("#box" + i).is(':empty'))  && !($("#box" + i + 1).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
 				if ($("#box" + (i + 2)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (i + 2) ).append(Computer.selection);
 					}, 1000);
+					$( "#box" + (i + 2) ).attr("value", Computer.selection);
 					return;
 				}
 			}		 
 		}
+
 		if ($('#box1').is(':empty') && Computer.turn === true && $("#box1").attr("value").length < 1 ){
 			setTimeout(function() {
 			  $( "#box1" ).append(Computer.selection);
