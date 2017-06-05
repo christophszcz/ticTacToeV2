@@ -40,12 +40,20 @@ function computerMove(){
 					$( "#box" + (j + 6) ).attr("value", Computer.selection);
 					return;
 				} 
-			} else if ( !($("#box" + j).is(':empty'))  && !($("#box" + i + 6).is(':empty')) && ($("#box" + j).attr("value") ===  $("#box" + (j + 6)).attr("value")) ){
+			} else if ( !($("#box" + j).is(':empty'))  && !($("#box" + (i + 6)).is(':empty')) && ($("#box" + j).attr("value") ===  $("#box" + (j + 6)).attr("value")) ){
 				if ($("#box" + (j + 3)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (j + 3) ).append(Computer.selection);
 					}, 1000);
 					$( "#box" + (j + 3) ).attr("value", Computer.selection);
+					return;
+				}	
+			} else if ( j <= 3 &&  !($("#box" + (j + 3)).is(':empty'))  && !($("#box" + (i + 6)).is(':empty')) && ($("#box" + (j + 3)).attr("value") ===  $("#box" + (j + 6)).attr("value")) ){
+				if ($("#box" + j).is(':empty')){
+					setTimeout(function() {
+				  	$( "#box" + j).append(Computer.selection);
+					}, 1000);
+					$( "#box" + j).attr("value", Computer.selection);
 					return;
 				}
 			}		 
