@@ -4,7 +4,7 @@ function computerMove(){
 	if(Computer.turn){
 
 		for (var i = 1; i < 10; i ++){ //Block win in a horizontal row 
-			if ( !($("#box" + i).is(':empty'))  && !($("#box" + i + 1).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
+			if ( !($("#box" + i).is(':empty'))  && !($("#box" + (i + 1)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
 				if ($("#box" + (i + 2)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (i + 2) ).append(Computer.selection);
@@ -12,7 +12,8 @@ function computerMove(){
 					$( "#box" + (i + 2) ).attr("value", Computer.selection);
 					return;
 				}
-			} else if ( !($("#box" + i).is(':empty'))  && !($("#box" + i + 2).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
+			}
+			if ( !($("#box" + i).is(':empty'))  && !($("#box" + (i + 2)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
 				if ($("#box" + (i + 1)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (i + 1) ).append(Computer.selection);
@@ -20,7 +21,16 @@ function computerMove(){
 					$( "#box" + (i + 1) ).attr("value", Computer.selection);
 					return;
 				}
-			}		 
+			}
+			if ( !($("#box" + (i + 1)).is(':empty'))  && !($("#box" + i + 2).is(':empty')) && ($("#box" + (i + 1)).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
+				if ($("#box" + i).is(':empty')){
+					setTimeout(function() {
+				  	$( "#box" + i).append(Computer.selection);
+					}, 1000);
+					$( "#box" + i).attr("value", Computer.selection);
+					return;
+				}
+			}	 
 		}
 
 		for (var j = 1; j < 10; j ++){ //Block two in a vertical row 
