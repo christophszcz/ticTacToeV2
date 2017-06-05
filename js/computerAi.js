@@ -12,8 +12,7 @@ function computerMove(){
 					$( "#box" + (i + 2) ).attr("value", Computer.selection);
 					return;
 				}
-			}
-			if ( !($("#box" + i).is(':empty'))  && !($("#box" + (i + 2)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
+			} else if ( !($("#box" + i).is(':empty'))  && !($("#box" + (i + 2)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
 				if ($("#box" + (i + 1)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (i + 1) ).append(Computer.selection);
@@ -21,8 +20,7 @@ function computerMove(){
 					$( "#box" + (i + 1) ).attr("value", Computer.selection);
 					return;
 				}
-			}
-			if ( !($("#box" + (i + 1)).is(':empty'))  && !($("#box" + i + 2).is(':empty')) && ($("#box" + (i + 1)).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
+			} else if ( i <= 7 && !($("#box" + (i + 1)).is(':empty'))  && !($("#box" + i + 2).is(':empty')) && ($("#box" + (i + 1)).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
 				if ($("#box" + i).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + i).append(Computer.selection);
@@ -33,15 +31,15 @@ function computerMove(){
 			}	 
 		}
 
-		for (var j = 1; j < 10; j ++){ //Block two in a vertical row 
-			if ( !($("#box" + j).is(':empty'))  && !($("#box" + i + 3).is(':empty')) && ($("#box" + j).attr("value") ===  $("#box" + (j + 3)).attr("value")) ){
+		for (var j = 1; j < 10; j ++){ //Block win in a vertical row 
+			if ( !($("#box" + j).is(':empty'))  && !($("#box" + (j + 3)).is(':empty')) && ($("#box" + j).attr("value") ===  $("#box" + (j + 3)).attr("value")) ){
 				if ($("#box" + (j + 6)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (j + 6) ).append(Computer.selection);
 					}, 1000);
 					$( "#box" + (j + 6) ).attr("value", Computer.selection);
 					return;
-				}
+				} 
 			}		 
 		}
 
@@ -85,28 +83,28 @@ function computerMove(){
 			 	$( "#box6" ).append(Computer.selection);
 			 	checkIfWin();
 			}, 1000);
-			$( "#box6" ).attr("value", Computer.selection);
+			$( "#box6" ).attr("value", Computer.selection);;
 			Computer.move ++;
 		} else if ($('#box7').is(':empty') && Computer.turn === true && $("#box7").attr("value").length < 1 ){
 			setTimeout(function() {
 			 	$( "#box7" ).append(Computer.selection);
 			 	checkIfWin();
 			}, 1000);
-			$( "#box7" ).attr("value", Computer.selection);
+			$( "#box7" ).attr("value", Computer.selection);;
 			Computer.move ++;
 		} else if ($('#box8').is(':empty') && Computer.turn === true && $("#box8").attr("value").length < 1 ){
 			setTimeout(function() {
 			 	$( "#box8" ).append(Computer.selection);
 			 	checkIfWin();
 			}, 1000);
-			$( "#box8" ).attr("value", Computer.selection);
+			$( "#box8" ).attr("value", Computer.selection);;
 			Computer.move ++;
 		} else if ($('#box9').is(':empty') && Computer.turn === true && $("#box9").attr("value").length < 1 ){
 			setTimeout(function() {
 			 	$( "#box9" ).append(Computer.selection);
 			 	checkIfWin();
 			}, 1000);
-			$( "#box9" ).attr("value", Computer.selection);
+			$( "#box9" ).attr("value", Computer.selection);;
 			Computer.move ++;
 		}
 		User.turn = true;
