@@ -1,7 +1,7 @@
 //A.I. Algorithm
 
 function computerMove(){
-	if(Computer.turn){
+	if(Computer.turn && win === false){
 
 		for (var i = 1; i < 10; i += 3){ //Block win in a horizontal row 
 			if (!($("#box" + i).is(':empty'))  && !($("#box" + (i + 1)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){

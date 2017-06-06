@@ -1,8 +1,10 @@
 $(document).ready(function(){
 	$('#myModal').modal('show');
 
+	win = false;
+
 	$('#box1').click(function(){
-		if ($('#box1').is(':empty') && $("#box1").attr("value").length < 1){
+		if ($('#box1').is(':empty') && $("#box1").attr("value").length < 1 && win === false){
 			$( "#box1" ).append(User.selection);
 			$( "#box1" ).attr("value", User.selection);
 			checkIfWin();
@@ -12,7 +14,7 @@ $(document).ready(function(){
 	});
 
 	$('#box2').click(function(){
-		if ($('#box2').is(':empty') && $("#box2").attr("value").length < 1){
+		if ($('#box2').is(':empty') && $("#box2").attr("value").length < 1 && win === false){
 			$( "#box2" ).append( User.selection);
 			$( "#box2" ).attr("value", User.selection);
 			checkIfWin();
@@ -22,7 +24,7 @@ $(document).ready(function(){
 	});
 
 	$('#box3').click(function(){
-		if ($('#box3').is(':empty') && $("#box3").attr("value").length < 1){
+		if ($('#box3').is(':empty') && $("#box3").attr("value").length < 1 && win === false){
 			$( "#box3" ).append( User.selection);
 			$( "#box3" ).attr("value", User.selection);
 			checkIfWin();
@@ -32,7 +34,7 @@ $(document).ready(function(){
 	});
 
 	$('#box4').click(function(){
-		if ($('#box4').is(':empty') && $("#box4").attr("value").length < 1){
+		if ($('#box4').is(':empty') && $("#box4").attr("value").length < 1 && win === false){
 			$( "#box4" ).append( User.selection);
 			$( "#box4" ).attr("value", User.selection);
 			checkIfWin();
@@ -42,7 +44,7 @@ $(document).ready(function(){
 	});
 
 	$('#box5').click(function(){
-		if ($('#box5').is(':empty') && $("#box5").attr("value").length < 1){
+		if ($('#box5').is(':empty') && $("#box5").attr("value").length < 1 && win === false){
 			$( "#box5" ).append( User.selection);
 			$( "#box5" ).attr("value", User.selection);
 			checkIfWin();
@@ -52,17 +54,17 @@ $(document).ready(function(){
 	});
 
 	$('#box6').click(function(){
-		if ($('#box6').is(':empty') && $("#box6").attr("value").length < 1){
+		if ($('#box6').is(':empty') && $("#box6").attr("value").length < 1 && win === false){
 			$( "#box6" ).append( User.selection);
 			$( "#box6" ).attr("value", User.selection);
 			checkIfWin();
+			computersTurn();
 		}
 		$( "#box6" ).off('click');
-		computersTurn();
 	});
 
 	$('#box7').click(function(){
-		if ($('#box7').is(':empty') && $("#box7").attr("value").length < 1){
+		if ($('#box7').is(':empty') && $("#box7").attr("value").length < 1 && win === false){
 			$( "#box7" ).append( User.selection);
 			$( "#box7" ).attr("value", User.selection);
 			checkIfWin();
@@ -72,7 +74,7 @@ $(document).ready(function(){
 	});
 
 	$('#box8').click(function(){
-		if ($('#box8').is(':empty') && $("#box8").attr("value").length < 1){
+		if ($('#box8').is(':empty') && $("#box8").attr("value").length < 1 && win === false){
 			$( "#box8" ).append( User.selection);
 			$( "#box8" ).attr("value", User.selection);
 			checkIfWin();
@@ -82,7 +84,7 @@ $(document).ready(function(){
 	});
 
 	$('#box9').click(function(){
-		if ($('#box9').is(':empty') && $("#box9").attr("value").length < 1){
+		if ($('#box9').is(':empty') && $("#box9").attr("value").length < 1 && win === false){
 			$( "#box9" ).append( User.selection);
 			$( "#box9" ).attr("value", User.selection);
 			checkIfWin();
