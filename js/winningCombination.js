@@ -29,9 +29,9 @@ function checkIfWin(){
 }
 
 function endTheGame(){
-	for (var i = 1; i < 10; i ++){
-		if ($("#box" + i).attr("value").length < 1){
-			document.getElementById("box" + i).setAttribute("value", "none");
+	for (var a = 1; a < 10; a ++){
+		if ($("#box" + a).attr("value").length < 1){
+			document.getElementById("box" + a).setAttribute("value", "none");
 			document.getElementById("speech-bubble-id").style.display = 'block';
 		}
 	}

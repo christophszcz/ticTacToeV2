@@ -22,7 +22,7 @@ function computerMove(){
 					$( "#box" + (i + 1) ).attr("value", Computer.selection);
 					return;
 				}
-			} else if ( i <= 7 && !($("#box" + (i + 1)).is(':empty'))  && !($("#box" + i + 2).is(':empty')) && ($("#box" + (i + 1)).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
+			} else if ( (i === 1 ||  i === 4 ||  i === 7) && !($("#box" + (i + 1)).is(':empty'))  && !($("#box" + i + 2).is(':empty')) && ($("#box" + (i + 1)).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
 				if ($("#box" + i).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + i).append(Computer.selection);
@@ -69,9 +69,16 @@ function computerMove(){
 		if ( !($("#box3").is(':empty'))  && !($("#box5").is(':empty')) && ($("#box3").attr("value") ===  $("#box5").attr("value")) && $("#box7").is(':empty') ){
 			setTimeout(function() {
 		  	$( "#box7").append(Computer.selection);
-		  	console.log('Block win in a diagonal');	
+		  	console.log('Block win in a diagonal-last on the last entry');	
 			}, 1000);
 			$( "#box7").attr("value", Computer.selection);
+			return;
+		} else if ( !($("#box3").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box3").attr("value") ===  $("#box7").attr("value")) && $("#box5").is(':empty') ){
+			setTimeout(function() {
+		  	$( "#box5").append(Computer.selection);
+		  	console.log('Block win in a diagonal on the middle entry');	
+			}, 1000);
+			$( "#box5").attr("value", Computer.selection);
 			return;
 		}
  
