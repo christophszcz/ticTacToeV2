@@ -3,8 +3,8 @@
 function computerMove(){
 	if(Computer.turn){
 
-		for (var i = 1; i < 10; i ++){ //Block win in a horizontal row 
-			if ( !($("#box" + i).is(':empty'))  && !($("#box" + (i + 1)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
+		for (var i = 1; i < 10; i += 3){ //Block win in a horizontal row 
+			if (!($("#box" + i).is(':empty'))  && !($("#box" + (i + 1)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
 				if ($("#box" + (i + 2)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (i + 2) ).append(Computer.selection);
@@ -13,7 +13,7 @@ function computerMove(){
 					$( "#box" + (i + 2) ).attr("value", Computer.selection);
 					return;
 				}
-			} else if ( i !== 3 &&  i !== 5 && !($("#box" + i).is(':empty'))  && !($("#box" + (i + 2)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
+			} else if (!($("#box" + i).is(':empty'))  && !($("#box" + (i + 2)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
 				if ($("#box" + (i + 1)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (i + 1) ).append(Computer.selection);
@@ -22,7 +22,7 @@ function computerMove(){
 					$( "#box" + (i + 1) ).attr("value", Computer.selection);
 					return;
 				}
-			} else if ( (i === 1 ||  i === 4 ||  i === 7) && !($("#box" + (i + 1)).is(':empty'))  && !($("#box" + i + 2).is(':empty')) && ($("#box" + (i + 1)).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
+			} else if (!($("#box" + (i + 1)).is(':empty'))  && !($("#box" + i + 2).is(':empty')) && ($("#box" + (i + 1)).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
 				if ($("#box" + i).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + i).append(Computer.selection);

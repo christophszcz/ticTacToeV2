@@ -56,9 +56,9 @@ $(document).ready(function(){
 			$( "#box6" ).append( User.selection);
 			$( "#box6" ).attr("value", User.selection);
 			checkIfWin();
-			computersTurn();
 		}
 		$( "#box6" ).off('click');
+		computersTurn();
 	});
 
 	$('#box7').click(function(){
