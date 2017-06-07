@@ -132,7 +132,7 @@ function turn(){
 	// document.getElementById("speech-bubble-id").removeChild(document.getElementById('winner-text'));
 	if (User.turn){
 		document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='winner-text'>It is your turn!</div>");
-		document.getElementById("speech-bubble-id").style.display = 'block';
+		document.getElementById("speech-bubble-id").style.display = 'inline-block';
 	} 
 	// else {
 
