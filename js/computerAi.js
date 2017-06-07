@@ -188,6 +188,7 @@ function computerMove(){
 			Computer.move ++;	 
 		}
 		User.turn = true;
-		Computer.turn = false;	 
+		Computer.turn = false;
+		turn();	 
 	}
 };

@@ -106,8 +106,7 @@ var Computer = {
 	'move': 0
 };
 
-// Choosing a box
-
+// Choose your mark
 $('#x-button').click(function(){
 	User.selection = 'X';
 	Computer.selection = 'O';
@@ -121,10 +120,21 @@ $('#o-button').click(function(){
 });
 
 //Computer's turn
-
 function computersTurn(){
 	User.turn = false;
 	Computer.turn = true;
 	User.move ++;
 	computerMove();
+}
+
+//Indicate player's turn
+function turn(){
+	// document.getElementById("speech-bubble-id").removeChild(document.getElementById('winner-text'));
+	if (User.turn){
+		document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='winner-text'>It is your turn!</div>");
+		document.getElementById("speech-bubble-id").style.display = 'block';
+	} 
+	// else {
+
+	// }
 }
