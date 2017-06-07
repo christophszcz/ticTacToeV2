@@ -69,25 +69,50 @@ function computerMove(){
 		if ( !($("#box3").is(':empty'))  && !($("#box5").is(':empty')) && ($("#box3").attr("value") ===  $("#box5").attr("value")) && $("#box7").is(':empty') ){
 			setTimeout(function() {
 		  	$( "#box7").append(Computer.selection);
-		  	console.log('Block win in a diagonal-last on the last entry');	
+		  	console.log('Block win in a forwarddiagonal-last on the last entry');	
 			}, 1000);
 			$( "#box7").attr("value", Computer.selection);
 			return;
 		} else if ( !($("#box3").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box3").attr("value") ===  $("#box7").attr("value")) && $("#box5").is(':empty') ){
 			setTimeout(function() {
 		  	$( "#box5").append(Computer.selection);
-		  	console.log('Block win in a diagonal on the middle entry');	
+		  	console.log('Block win in a forward diagonal on the middle entry');	
 			}, 1000);
 			$( "#box5").attr("value", Computer.selection);
 			return; 
 		} else if ( !($("#box5").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box5").attr("value") ===  $("#box7").attr("value")) && $("#box3").is(':empty') ){
 			setTimeout(function() {
 		  	$( "#box3").append(Computer.selection);
-		  	console.log('Block win in a diagonal on the first entry');	
+		  	console.log('Block win in a forward diagonal on the first entry');	
 			}, 1000);
 			$( "#box3").attr("value", Computer.selection);
 			return;
 		}
+
+		//Block win in a backward diagonal  
+		if ( !($("#box1").is(':empty'))  && !($("#box5").is(':empty')) && ($("#box1").attr("value") ===  $("#box5").attr("value")) && $("#box9").is(':empty') ){
+			setTimeout(function() {
+		  	$( "#box9").append(Computer.selection);
+		  	console.log('Block win in a backward diagonal-last on the last entry');	
+			}, 1000);
+			$( "#box9").attr("value", Computer.selection);
+			return;
+		} else if ( !($("#box1").is(':empty'))  && !($("#box9").is(':empty')) && ($("#box1").attr("value") ===  $("#box9").attr("value")) && $("#box5").is(':empty') ){
+			setTimeout(function() {
+		  	$( "#box5").append(Computer.selection);
+		  	console.log('Block win in a backward diagonal on the middle entry');	
+			}, 1000);
+			$( "#box5").attr("value", Computer.selection);
+			return; 
+		} else if ( !($("#box5").is(':empty'))  && !($("#box9").is(':empty')) && ($("#box5").attr("value") ===  $("#box9").attr("value")) && $("#box1").is(':empty') ){
+			setTimeout(function() {
+		  	$( "#box1").append(Computer.selection);
+		  	console.log('Block win in a backward diagonal on the first entry');	
+			}, 1000);
+			$( "#box1").attr("value", Computer.selection);
+			return;
+		}
+
  
 		if ($('#box1').is(':empty') && Computer.turn === true && $("#box1").attr("value").length < 1 ){
 			setTimeout(function() {
