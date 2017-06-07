@@ -92,6 +92,11 @@ $(document).ready(function(){
 		}
 		$( "#box9" ).off('click');
 	});
+
+	$('#x').click(function(){
+		document.getElementById('speech-bubble-id').style.display = 'none';
+		document.getElementById('speech-bubble-id').removeChild(document.getElementById('bubble-text'));
+	});
 });
 
 var User = {
@@ -131,10 +136,8 @@ function computersTurn(){
 function turn(){
 	// document.getElementById("speech-bubble-id").removeChild(document.getElementById('winner-text'));
 	if (User.turn){
-		document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='winner-text'>It is your turn!</div>");
+		document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text'>It is your turn!</div>");
 		document.getElementById("speech-bubble-id").style.display = 'inline-block';
 	} 
-	// else {
-
-	// }
 }
+

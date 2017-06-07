@@ -89,22 +89,16 @@ body {
   display:none;
 }
 
-.speech-bubble:before {
-  border-style:solid;
-  border-width:20px 20px 0;
-  border-color:#FF8C00 transparent;
-  position:absolute;
-  bottom:-20px;  
-  left:40px;
-  content:"";  
+#bubble-text{
+  display:inline-block;
 }
 
-.speech-bubble:after {
-  border-style:solid;
-  border-width:13px 13px 0;
-  border-color:#fff transparent;
-  position:absolute;
-  bottom:-13px;  
-  left:47px; 
-  content:""; 
+#x{
+  cursor:pointer;
+  display: inline;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  opacity: .3;
 }
