@@ -79,6 +79,13 @@ function computerMove(){
 		  	console.log('Block win in a diagonal on the middle entry');	
 			}, 1000);
 			$( "#box5").attr("value", Computer.selection);
+			return; 
+		} else if ( !($("#box5").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box5").attr("value") ===  $("#box7").attr("value")) && $("#box3").is(':empty') ){
+			setTimeout(function() {
+		  	$( "#box3").append(Computer.selection);
+		  	console.log('Block win in a diagonal on the first entry');	
+			}, 1000);
+			$( "#box3").attr("value", Computer.selection);
 			return;
 		}
  
