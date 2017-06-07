@@ -9,6 +9,7 @@ $(document).ready(function(){
 			$( "#box1" ).attr("value", User.selection);
 			checkIfWin();
 			computersTurn();
+			turn();
 		}
 		$( "#box1" ).off('click');
 	});
@@ -19,6 +20,7 @@ $(document).ready(function(){
 			$( "#box2" ).attr("value", User.selection);
 			checkIfWin();
 			computersTurn();
+			turn();
 		}
 		$( "#box2" ).off('click');
 	});
@@ -29,6 +31,7 @@ $(document).ready(function(){
 			$( "#box3" ).attr("value", User.selection);
 			checkIfWin();
 			computersTurn();
+			turn();
 		}
 		$( "#box3" ).off('click');
 	});
@@ -39,6 +42,7 @@ $(document).ready(function(){
 			$( "#box4" ).attr("value", User.selection);
 			checkIfWin();
 			computersTurn();
+			turn();
 		}
 		$( "#box4" ).off('click');
 	});
@@ -49,6 +53,7 @@ $(document).ready(function(){
 			$( "#box5" ).attr("value", User.selection);
 			checkIfWin();
 			computersTurn();
+			turn();
 		}
 		$( "#box5" ).off('click');
 	});
@@ -59,6 +64,7 @@ $(document).ready(function(){
 			$( "#box6" ).attr("value", User.selection);
 			checkIfWin();
 			computersTurn();
+			turn();
 		}
 		$( "#box6" ).off('click');
 	});
@@ -69,6 +75,7 @@ $(document).ready(function(){
 			$( "#box7" ).attr("value", User.selection);
 			checkIfWin();
 			computersTurn();
+			turn();
 		}
 		$( "#box7" ).off('click');
 	});
@@ -79,6 +86,7 @@ $(document).ready(function(){
 			$( "#box8" ).attr("value", User.selection);
 			checkIfWin();
 			computersTurn();
+			turn();
 		}
 		$( "#box8" ).off('click');
 	});
@@ -89,9 +97,14 @@ $(document).ready(function(){
 			$( "#box9" ).attr("value", User.selection);
 			checkIfWin();
 			computersTurn();
+			turn();
 		}
 		$( "#box9" ).off('click');
 	});
+
+	if (User.turn || Computer.turn){
+		turn();
+	}
 
 	$('#x').click(function(){
 		document.getElementById('speech-bubble-id').style.display = 'none';
@@ -134,10 +147,14 @@ function computersTurn(){
 
 //Indicate player's turn
 function turn(){
-	// document.getElementById("speech-bubble-id").removeChild(document.getElementById('winner-text'));
-	if (User.turn){
+	if (User.turn && win === false){
+		$('#bubble-text').remove();
 		document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text'>It is your turn!</div>");
 		document.getElementById("speech-bubble-id").style.display = 'inline-block';
-	} 
+	} else if (Computer.turn && win === false) {
+		$('#bubble-text').remove();
+  	document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text'>It is the computer's turn!</div>");
+		document.getElementById("speech-bubble-id").style.display = 'inline-block'; 
+	}
 }
 

@@ -2,7 +2,7 @@
 
 function computerMove(){
 	if(Computer.turn && win === false){
-
+		changeInput();
 		for (var i = 1; i < 10; i += 3){ //Block win in a horizontal row 
 			if (!($("#box" + i).is(':empty'))  && !($("#box" + (i + 1)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
 				if ($("#box" + (i + 2)).is(':empty')){
@@ -11,6 +11,7 @@ function computerMove(){
 				  	console.log('Block win in a horizontal row -spot3 ');	
 					}, 1000);
 					$( "#box" + (i + 2) ).attr("value", Computer.selection);
+					checkIfWin();
 					return;
 				}
 			} else if (!($("#box" + i).is(':empty'))  && !($("#box" + (i + 2)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
@@ -20,6 +21,7 @@ function computerMove(){
 				  	console.log('Block win in a horizontal row -spot2 ');
 					}, 1000);
 					$( "#box" + (i + 1) ).attr("value", Computer.selection);
+					checkIfWin();
 					return;
 				}
 			} else if (!($("#box" + (i + 1)).is(':empty'))  && !($("#box" + i + 2).is(':empty')) && ($("#box" + (i + 1)).attr("value") ===  $("#box" + (i + 2)).attr("value")) ){
@@ -29,6 +31,7 @@ function computerMove(){
 				  	console.log('Block win in a horizontal row -spot1 ');
 					}, 1000);
 					$( "#box" + i).attr("value", Computer.selection);
+					checkIfWin();
 					return;
 				}
 			} 
@@ -42,6 +45,7 @@ function computerMove(){
 				  	console.log('Block win in a vertical row- spot 3 ');
 					}, 1000);
 					$( "#box" + (j + 6) ).attr("value", Computer.selection);
+					checkIfWin();
 					return;
 				} 
 			} else if ( !($("#box" + j).is(':empty'))  && !($("#box" + (i + 6)).is(':empty')) && ($("#box" + j).attr("value") ===  $("#box" + (j + 6)).attr("value")) ){
@@ -51,6 +55,7 @@ function computerMove(){
 				  	console.log('Block win in a vertical row- spot middle');
 					}, 1000);
 					$( "#box" + (j + 3) ).attr("value", Computer.selection);
+					checkIfWin();
 					return;
 				}	
 			} else if ( j <= 3 &&  !($("#box" + (j + 3)).is(':empty'))  && !($("#box" + (i + 6)).is(':empty')) && ($("#box" + (j + 3)).attr("value") ===  $("#box" + (j + 6)).attr("value")) ){
@@ -60,6 +65,7 @@ function computerMove(){
 				  	console.log('Block win in a vertical row- spot 1');
 					}, 1000);
 					$( "#box" + j).attr("value", Computer.selection);
+					checkIfWin();
 					return;
 				}
 			}		 
@@ -72,6 +78,7 @@ function computerMove(){
 		  	console.log('Block win in a forwarddiagonal-last on the last entry');	
 			}, 1000);
 			$( "#box7").attr("value", Computer.selection);
+			checkIfWin();
 			return;
 		} else if ( !($("#box3").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box3").attr("value") ===  $("#box7").attr("value")) && $("#box5").is(':empty') ){
 			setTimeout(function() {
@@ -79,6 +86,7 @@ function computerMove(){
 		  	console.log('Block win in a forward diagonal on the middle entry');	
 			}, 1000);
 			$( "#box5").attr("value", Computer.selection);
+			checkIfWin();
 			return; 
 		} else if ( !($("#box5").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box5").attr("value") ===  $("#box7").attr("value")) && $("#box3").is(':empty') ){
 			setTimeout(function() {
@@ -86,6 +94,7 @@ function computerMove(){
 		  	console.log('Block win in a forward diagonal on the first entry');	
 			}, 1000);
 			$( "#box3").attr("value", Computer.selection);
+			checkIfWin();
 			return;
 		}
 
@@ -96,6 +105,7 @@ function computerMove(){
 		  	console.log('Block win in a backward diagonal-last on the last entry');	
 			}, 1000);
 			$( "#box9").attr("value", Computer.selection);
+			checkIfWin();
 			return;
 		} else if ( !($("#box1").is(':empty'))  && !($("#box9").is(':empty')) && ($("#box1").attr("value") ===  $("#box9").attr("value")) && $("#box5").is(':empty') ){
 			setTimeout(function() {
@@ -103,6 +113,7 @@ function computerMove(){
 		  	console.log('Block win in a backward diagonal on the middle entry');	
 			}, 1000);
 			$( "#box5").attr("value", Computer.selection);
+			checkIfWin();
 			return; 
 		} else if ( !($("#box5").is(':empty'))  && !($("#box9").is(':empty')) && ($("#box5").attr("value") ===  $("#box9").attr("value")) && $("#box1").is(':empty') ){
 			setTimeout(function() {
@@ -110,6 +121,7 @@ function computerMove(){
 		  	console.log('Block win in a backward diagonal on the first entry');	
 			}, 1000);
 			$( "#box1").attr("value", Computer.selection);
+			checkIfWin();
 			return;
 		}
 
@@ -121,7 +133,8 @@ function computerMove(){
 			  console.log('Box1');
 			}, 1000);
 			$( "#box1" ).attr("value", Computer.selection);
-			Computer.move ++;	 
+			Computer.move ++;	
+			checkIfWin(); 
 		} else if ($('#box2').is(':empty') && Computer.turn === true && $("#box2").attr("value").length < 1 ){
 			setTimeout(function() {
 			  $( "#box2" ).append(Computer.selection);
@@ -130,6 +143,7 @@ function computerMove(){
 			}, 1000);
 			$( "#box2" ).attr("value", Computer.selection);
 			Computer.move ++;	 
+			checkIfWin();
 		} else if ($('#box3').is(':empty') && Computer.turn === true && $("#box3").attr("value").length < 1 ){
 			setTimeout(function() {
 			  $( "#box3" ).append(Computer.selection);
@@ -137,7 +151,8 @@ function computerMove(){
 			  console.log('Box3');
 			}, 1000);
 			$( "#box3" ).attr("value", Computer.selection);
-			Computer.move ++;	 
+			Computer.move ++;
+			checkIfWin();	 
 		} else if ($('#box4').is(':empty') && Computer.turn === true && $("#box4").attr("value").length < 1 ){
 			setTimeout(function() {
 			  $( "#box4" ).append(Computer.selection);
@@ -146,6 +161,7 @@ function computerMove(){
 			}, 1000);
 			$( "#box4" ).attr("value", Computer.selection);
 			Computer.move ++; 
+			checkIfWin();
 		} else if ($('#box5').is(':empty') && Computer.turn === true && $("#box5").attr("value").length < 1 ){
 			setTimeout(function() {
 			 	$( "#box5" ).append(Computer.selection);
@@ -153,7 +169,8 @@ function computerMove(){
 			 	console.log('Box5');
 			}, 1000);
 			$( "#box5" ).attr("value", Computer.selection);
-			Computer.move ++;	 
+			Computer.move ++;	
+			checkIfWin(); 
 		} else if ($('#box6').is(':empty') && Computer.turn === true && $("#box6").attr("value").length < 1 ){
 			setTimeout(function() {
 			 	$( "#box6" ).append(Computer.selection);
@@ -161,7 +178,8 @@ function computerMove(){
 			 	console.log('Box6');
 			}, 1000);
 			$( "#box6" ).attr("value", Computer.selection);;
-			Computer.move ++;	 
+			Computer.move ++;	
+			checkIfWin(); 
 		} else if ($('#box7').is(':empty') && Computer.turn === true && $("#box7").attr("value").length < 1 ){
 			setTimeout(function() {
 			 	$( "#box7" ).append(Computer.selection);
@@ -170,6 +188,7 @@ function computerMove(){
 			}, 1000);
 			$( "#box7" ).attr("value", Computer.selection);;
 			Computer.move ++;	 
+			checkIfWin();
 		} else if ($('#box8').is(':empty') && Computer.turn === true && $("#box8").attr("value").length < 1 ){
 			setTimeout(function() {
 			 	$( "#box8" ).append(Computer.selection);
@@ -177,7 +196,8 @@ function computerMove(){
 			 	console.log('Box8');
 			}, 1000);
 			$( "#box8" ).attr("value", Computer.selection);;
-			Computer.move ++;	 
+			Computer.move ++;	
+			checkIfWin(); 
 		} else if ($('#box9').is(':empty') && Computer.turn === true && $("#box9").attr("value").length < 1 ){
 			setTimeout(function() {
 			 	$( "#box9" ).append(Computer.selection);
@@ -185,10 +205,17 @@ function computerMove(){
 			 	console.log('Box9');
 			}, 1000);
 			$( "#box9" ).attr("value", Computer.selection);;
-			Computer.move ++;	 
+			Computer.move ++;
+			checkIfWin();	 
 		}
+	}
+};
+
+function changeInput(){
+	setTimeout(function() {
 		User.turn = true;
 		Computer.turn = false;
 		turn();	 
-	}
-};
+	}, 1000);
+}
+		 
