@@ -125,7 +125,6 @@ function computerMove(){
 			return;
 		}
 
- 
 		if ($('#box1').is(':empty') && Computer.turn === true && $("#box1").attr("value").length < 1 ){
 			setTimeout(function() {
 			  $( "#box1" ).append(Computer.selection);
@@ -133,7 +132,6 @@ function computerMove(){
 			  console.log('Box1');
 			}, 1000);
 			$( "#box1" ).attr("value", Computer.selection);
-			Computer.move ++;	
 			checkIfWin(); 
 		} else if ($('#box2').is(':empty') && Computer.turn === true && $("#box2").attr("value").length < 1 ){
 			setTimeout(function() {
@@ -141,8 +139,7 @@ function computerMove(){
 			  checkIfWin();
 			  console.log('Box2');
 			}, 1000);
-			$( "#box2" ).attr("value", Computer.selection);
-			Computer.move ++;	 
+			$( "#box2" ).attr("value", Computer.selection); 
 			checkIfWin();
 		} else if ($('#box3').is(':empty') && Computer.turn === true && $("#box3").attr("value").length < 1 ){
 			setTimeout(function() {
@@ -151,7 +148,6 @@ function computerMove(){
 			  console.log('Box3');
 			}, 1000);
 			$( "#box3" ).attr("value", Computer.selection);
-			Computer.move ++;
 			checkIfWin();	 
 		} else if ($('#box4').is(':empty') && Computer.turn === true && $("#box4").attr("value").length < 1 ){
 			setTimeout(function() {
@@ -159,8 +155,7 @@ function computerMove(){
 			  checkIfWin();
 			  console.log('Box4');	
 			}, 1000);
-			$( "#box4" ).attr("value", Computer.selection);
-			Computer.move ++; 
+			$( "#box4" ).attr("value", Computer.selection); 
 			checkIfWin();
 		} else if ($('#box5').is(':empty') && Computer.turn === true && $("#box5").attr("value").length < 1 ){
 			setTimeout(function() {
@@ -169,7 +164,6 @@ function computerMove(){
 			 	console.log('Box5');
 			}, 1000);
 			$( "#box5" ).attr("value", Computer.selection);
-			Computer.move ++;	
 			checkIfWin(); 
 		} else if ($('#box6').is(':empty') && Computer.turn === true && $("#box6").attr("value").length < 1 ){
 			setTimeout(function() {
@@ -177,8 +171,7 @@ function computerMove(){
 			 	checkIfWin();
 			 	console.log('Box6');
 			}, 1000);
-			$( "#box6" ).attr("value", Computer.selection);;
-			Computer.move ++;	
+			$( "#box6" ).attr("value", Computer.selection);
 			checkIfWin(); 
 		} else if ($('#box7').is(':empty') && Computer.turn === true && $("#box7").attr("value").length < 1 ){
 			setTimeout(function() {
@@ -186,8 +179,7 @@ function computerMove(){
 			 	checkIfWin();
 			 	console.log('Box7');
 			}, 1000);
-			$( "#box7" ).attr("value", Computer.selection);;
-			Computer.move ++;	 
+			$( "#box7" ).attr("value", Computer.selection); 
 			checkIfWin();
 		} else if ($('#box8').is(':empty') && Computer.turn === true && $("#box8").attr("value").length < 1 ){
 			setTimeout(function() {
@@ -195,8 +187,7 @@ function computerMove(){
 			 	checkIfWin();
 			 	console.log('Box8');
 			}, 1000);
-			$( "#box8" ).attr("value", Computer.selection);;
-			Computer.move ++;	
+			$( "#box8" ).attr("value", Computer.selection);
 			checkIfWin(); 
 		} else if ($('#box9').is(':empty') && Computer.turn === true && $("#box9").attr("value").length < 1 ){
 			setTimeout(function() {
@@ -204,8 +195,7 @@ function computerMove(){
 			 	checkIfWin();
 			 	console.log('Box9');
 			}, 1000);
-			$( "#box9" ).attr("value", Computer.selection);;
-			Computer.move ++;
+			$( "#box9" ).attr("value", Computer.selection);
 			checkIfWin();	 
 		}
 	}

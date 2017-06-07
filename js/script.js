@@ -114,14 +114,12 @@ $(document).ready(function(){
 
 var User = {
 	'selection' : 'X',
-	'turn' : true,
-	'move': 0
+	'turn' : true
 };
 
 var Computer = {
 	'selection' : 'O',
-	'turn' : false,
-	'move': 0
+	'turn' : false
 };
 
 // Choose your mark
