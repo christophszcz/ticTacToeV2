@@ -139,20 +139,23 @@ $('#o-button').click(function(){
 function computersTurn(){
 	User.turn = false;
 	Computer.turn = true;
-	User.move ++;
 	computerMove();
 }
 
 //Indicate player's turn
 function turn(){
+	var speechBubble = document.getElementById('bubble-text');
 	if (User.turn && win === false){
-		$('#bubble-text').remove();
+		if (speechBubble !== null){
+			speechBubble.parentNode.removeChild(speechBubble);
+		}
 		document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text'>It is your turn!</div>");
 		document.getElementById("speech-bubble-id").style.display = 'inline-block';
 	} else if (Computer.turn && win === false) {
-		$('#bubble-text').remove();
+		if (speechBubble !== null){
+			speechBubble.parentNode.removeChild(speechBubble);
+		}
   	document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text'>It is the computer's turn!</div>");
 		document.getElementById("speech-bubble-id").style.display = 'inline-block'; 
 	}
 }
-
