@@ -75,10 +75,9 @@ function endTheGame(){
 function catsGame(){
 	var speechBubble = document.getElementById('bubble-text');
 	if( !($('#box1').is(':empty')) && !($('#box2').is(':empty')) && !($('#box3').is(':empty')) && !($('#box4').is(':empty')) && !($('#box5').is(':empty')) && !($('#box6').is(':empty')) && !($('#box7').is(':empty')) && !($('#box8').is(':empty')) && !($('#box9').is(':empty')) ){
-		if (speechBubble !== null){
-			speechBubble.parentNode.removeChild(speechBubble);
-		}
-		document.getElementById('speech-bubble-id').insertAdjacentHTML("afterbegin", "Unfortunately, Nobody won the game! " + "<a href='#' onclick='location.reload();'>Play Again</a>");
+		win = true;
+		speechBubble.parentNode.removeChild(speechBubble);
+		document.getElementById('speech-bubble-id').insertAdjacentHTML("afterbegin", "Unfortunately, nobody won the game. " + "<a href='#' onclick='location.reload();'>Play Again</a>");
 		endTheGame();
 	}
 }
