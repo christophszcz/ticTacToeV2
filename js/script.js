@@ -110,11 +110,18 @@ $(document).ready(function(){
 		document.getElementById('speech-bubble-id').style.display = 'none';
 		document.getElementById('speech-bubble-id').removeChild(document.getElementById('bubble-text'));
 	});
+
+	var number = Math.floor(Math.random()*2 + 1);
+	if (number === 2){
+		User.turn = true;
+	} else{
+		Computer.turn = true;
+	}
 });
 
 var User = {
 	'selection' : 'X',
-	'turn' : true
+	'turn' : false
 };
 
 var Computer = {
