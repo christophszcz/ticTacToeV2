@@ -111,31 +111,19 @@ $(document).ready(function(){
 		document.getElementById('speech-bubble-id').removeChild(document.getElementById('bubble-text'));
 	});
 
-	var number = Math.floor(Math.random() * 2);
-
 	// Choose your mark
 	$('#x-button').click(function(){
 		User.selection = 'X';
 		Computer.selection = 'O';
 		$('#myModal').modal('toggle');
-		if (number === 0){
-			User.turn = true;
-		} else{
-			Computer.turn = true;
-			computerMove();
-		}
+		firstMove();
 	});
 
 	$('#o-button').click(function(){
 		User.selection = 'O';
 		Computer.selection = 'X';
 		$('#myModal').modal('toggle');
-		if (number === 0){
-			User.turn = true;
-		} else{
-			Computer.turn = true;
-			computerMove();
-		}
+		firstMove();
 	});
 
 });
@@ -155,6 +143,18 @@ function computersTurn(){
 	User.turn = false;
 	Computer.turn = true;
 	computerMove();
+}
+
+//First move
+function firstMove(){
+	var number = Math.floor(Math.random() * 2);
+	if (number === 0){
+		User.turn = true;
+		turn();
+	} else{
+		Computer.turn = true;
+		computerMove();
+	}
 }
 
 //Indicate player's turn
