@@ -111,12 +111,33 @@ $(document).ready(function(){
 		document.getElementById('speech-bubble-id').removeChild(document.getElementById('bubble-text'));
 	});
 
-	var number = Math.floor(Math.random()*2 + 1);
-	if (number === 2){
-		User.turn = true;
-	} else{
-		Computer.turn = true;
-	}
+	var number = Math.floor(Math.random() * 2);
+
+	// Choose your mark
+	$('#x-button').click(function(){
+		User.selection = 'X';
+		Computer.selection = 'O';
+		$('#myModal').modal('toggle');
+		if (number === 0){
+			User.turn = true;
+		} else{
+			Computer.turn = true;
+			computerMove();
+		}
+	});
+
+	$('#o-button').click(function(){
+		User.selection = 'O';
+		Computer.selection = 'X';
+		$('#myModal').modal('toggle');
+		if (number === 0){
+			User.turn = true;
+		} else{
+			Computer.turn = true;
+			computerMove();
+		}
+	});
+
 });
 
 var User = {
@@ -128,19 +149,6 @@ var Computer = {
 	'selection' : 'O',
 	'turn' : false
 };
-
-// Choose your mark
-$('#x-button').click(function(){
-	User.selection = 'X';
-	Computer.selection = 'O';
-	$('#myModal').modal('toggle');
-});
-
-$('#o-button').click(function(){
-	User.selection = 'O';
-	Computer.selection = 'X';
-	$('#myModal').modal('toggle');
-});
 
 //Computer's turn
 function computersTurn(){
