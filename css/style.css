@@ -31,10 +31,10 @@ body {
   text-align: center;
   padding: 25px;
   border: 1px solid #fff;
-  height: 122px;
+  height: 110px;
   font-family: 'chalk-font';
   color: #fff;
-  width: 102px;
+  width: 100px;
 }
 
 .col-md-4{
@@ -43,10 +43,13 @@ body {
 }
 
 .help{
+  text-align: right;
+}
+
+.help-link{
   font-family: 'chalk-font';
   color: #fff;
   font-size: 20px;
-  text-align: right;
   margin-right: 20px;
 }
 
