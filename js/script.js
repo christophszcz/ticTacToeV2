@@ -127,6 +127,12 @@ $(document).ready(function(){
 		firstMove();
 		stateSelection();
 	});
+
+	var close = document.getElementById('close-id');  
+	close.addEventListener('click', function() {     
+	 	firstMove();
+		stateSelection();
+	}, false);
 });
 
 var User = {
