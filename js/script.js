@@ -117,6 +117,7 @@ $(document).ready(function(){
 		Computer.selection = 'O';
 		$('#myModal').modal('toggle');
 		firstMove();
+		stateSelection();
 	});
 
 	$('#o-button').click(function(){
@@ -124,8 +125,8 @@ $(document).ready(function(){
 		Computer.selection = 'X';
 		$('#myModal').modal('toggle');
 		firstMove();
+		stateSelection();
 	});
-
 });
 
 var User = {
@@ -155,6 +156,12 @@ function firstMove(){
 		Computer.turn = true;
 		computerMove();
 	}
+}
+
+//State selection
+function stateSelection(){
+	document.getElementById('your-mark').insertAdjacentHTML("afterbegin", User.selection);
+	document.getElementById('computer-mark').insertAdjacentHTML("afterbegin", Computer.selection);
 }
 
 //Indicate player's turn
