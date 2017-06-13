@@ -125,6 +125,10 @@ body {
   list-style-type: none;
 }
 
+#speech-bubble-modal-id{
+  font-size: 12px;
+}
+
 @media (max-width: 500px){
   #speech-bubble-id{
     font-size: 11px;
