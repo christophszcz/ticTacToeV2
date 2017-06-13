@@ -72,13 +72,15 @@ body {
   }
 }
 
-/* Starting Modal */
-
-@media (min-width: 768px){
-  .modal-dialog {
-    width: 345px;
+@media(max-width: 400px){
+  .box{
+    font-size: 28px;
+    width: 80px;
+    height: 80px;
   }
 }
+
+/* Starting Modal */
 
 .modal-body{
   display: flex;
@@ -96,6 +98,12 @@ body {
 
 @font-face{  font-family:'chalk-font';  
   src: url('../fonts/SqueakyChalkSound.ttf'); 
+}
+
+@media (min-width: 768px){
+  .modal-dialog {
+    width: 345px;
+  }
 }
 
 /* Speech Bubble */
@@ -133,6 +141,11 @@ body {
   opacity: .3;
 }
 
+@media(max-width: 400px){
+  .speech-bubble{
+    padding: 11px;
+  }
+}
 /* Help Modal */
 
 .game-info{
