@@ -162,6 +162,13 @@ function firstMove(){
 function stateSelection(){
 	document.getElementById('your-mark').insertAdjacentHTML("afterbegin", User.selection);
 	document.getElementById('computer-mark').insertAdjacentHTML("afterbegin", Computer.selection);
+	if (User.selection === "X"){
+		document.getElementById('your-mark').className += " x-mark";
+		document.getElementById('computer-mark').className += " o-mark";
+	} else{
+		document.getElementById('your-mark').className += " o-mark";
+		document.getElementById('computer-mark').className += " x-mark";
+	}
 }
 
 //Indicate player's turn

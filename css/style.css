@@ -129,6 +129,18 @@ body {
   font-size: 12px;
 }
 
+.modal-mark{
+  font-weight: 900;
+}
+
+.x-mark{
+  color: #337ab7;
+}
+
+.o-mark{
+  color: #f0ad4e;
+}
+
 @media (max-width: 500px){
   #speech-bubble-id{
     font-size: 11px;

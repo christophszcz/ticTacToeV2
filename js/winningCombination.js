@@ -91,10 +91,13 @@ function endTheGame(){
 
 function catsGame(){
 	var speechBubble = document.getElementById('bubble-text');
+	var speechBubbleModal = document.getElementById('bubble-text-modal');
 	if( !($('#box1').is(':empty')) && !($('#box2').is(':empty')) && !($('#box3').is(':empty')) && !($('#box4').is(':empty')) && !($('#box5').is(':empty')) && !($('#box6').is(':empty')) && !($('#box7').is(':empty')) && !($('#box8').is(':empty')) && !($('#box9').is(':empty')) ){
 		winOrTie = true;
 		speechBubble.parentNode.removeChild(speechBubble);
+		speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		document.getElementById('speech-bubble-id').insertAdjacentHTML("afterbegin", "Unfortunately, nobody won the game. " + "<a href='#' onclick='location.reload();'>Play Again</a>");
+		document.getElementById("speech-bubble-modal-id").insertAdjacentHTML("afterbegin", "Nobody won.");
 		endTheGame();
 	}
 }
