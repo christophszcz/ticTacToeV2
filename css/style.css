@@ -121,6 +121,12 @@ body {
 
 /* Help Modal */
 
-@media (max-width: 992px){
-  
+.game-info{
+  list-style-type: none;
+}
+
+@media (max-width: 500px){
+  #speech-bubble-id{
+    font-size: 11px;
+  }
 }
