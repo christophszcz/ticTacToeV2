@@ -188,6 +188,6 @@ body {
 
 @media(max-width: 400px){
   #speech-bubble-modal-id {
-    font-size: 8px;
+    font-size: 6px;
   }
 }
