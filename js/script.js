@@ -160,21 +160,24 @@ function firstMove(){
 //Indicate player's turn
 function turn(){
 	var speechBubble = document.getElementById('bubble-text');
+	var speechBubbleModal = document.getElementById('bubble-text-modal');
 	if (User.turn && winOrTie === false){
 		if (speechBubble !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
+			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
 		document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text'>It's your turn!</div>");
 		document.getElementById("speech-bubble-id").style.display = 'inline-block';
-		document.getElementById("speech-bubble-modal-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text'>It's your turn!</div>");
+		document.getElementById("speech-bubble-modal-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text-modal'>It's your turn!</div>");
 		document.getElementById("speech-bubble-modal-id").style.display = 'inline-block';
 	} else if (Computer.turn && winOrTie === false) {
 		if (speechBubble !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
+			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
   	document.getElementById("speech-bubble-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text'>Now it's the computer's turn.</div>");
 		document.getElementById("speech-bubble-id").style.display = 'inline-block'; 
-		document.getElementById("speech-bubble-modal-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text'>Now it's the computer's turn.</div>");
+		document.getElementById("speech-bubble-modal-id").insertAdjacentHTML("afterbegin", "<div id='bubble-text-modal'>Now it's the computer's turn.</div>");
 		document.getElementById("speech-bubble-modal-id").style.display = 'inline-block'; 
 	}
 }
