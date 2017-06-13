@@ -73,10 +73,19 @@ body {
 }
 
 @media(max-width: 400px){
+  html{
+    border: 20px solid brown;
+  }
   .box{
     font-size: 28px;
     width: 80px;
     height: 80px;
+  }
+  .grid{
+    margin-bottom: 5px;
+  }
+  .help-link{
+    font-size: 12px;
   }
 }
 
