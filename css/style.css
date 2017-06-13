@@ -185,3 +185,9 @@ body {
     font-size: 15px;
   }
 }
+
+@media(max-width: 400px){
+  #speech-bubble-modal-id {
+    font-size: 8px;
+  }
+}
