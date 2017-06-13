@@ -152,7 +152,7 @@ body {
 
 @media(max-width: 400px){
   .speech-bubble{
-    padding: 11px;
+    padding: 15px;
   }
 }
 /* Help Modal */
@@ -188,6 +188,6 @@ body {
 
 @media(max-width: 400px){
   #speech-bubble-modal-id {
-    font-size: 6px;
+    font-size: 7px;
   }
 }
