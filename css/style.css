@@ -58,6 +58,20 @@ body {
   text-decoration: none;
 }
 
+@media(max-width: 500px){
+  h2.title{
+    display: none;
+  }
+  #speech-bubble-id {
+    margin-top: 10px;
+  }
+  .box{
+    font-size: 35px;
+    width: 90px;
+    height: 90px;
+  }
+}
+
 /* Starting Modal */
 
 @media (min-width: 768px){
