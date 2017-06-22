@@ -5,7 +5,7 @@ function checkIfWin(){
 	var speechBubbleModal = document.getElementById('bubble-text-modal');
 	if( !($('#box1').is(':empty'))  &&  $("#box1").attr("value") ===  $("#box4").attr("value")  &&  ($("#box4").attr("value") ===  $("#box7").attr("value")) ){
 		winOrTie = true;
-		if (speechBubble !== null){
+		if (speechBubble !== null && speechBubbleModal !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
 			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
@@ -14,7 +14,7 @@ function checkIfWin(){
 		endTheGame();
 	} else if( !($('#box2').is(':empty'))  &&  $("#box2").attr("value") ===  $("#box5").attr("value")  &&  ($("#box5").attr("value") ===  $("#box8").attr("value")) ){
 		winOrTie = true;
-		if (speechBubble !== null){
+		if (speechBubble !== null && speechBubbleModal !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
 			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
@@ -23,7 +23,7 @@ function checkIfWin(){
 		endTheGame();
 	} else if( !($('#box3').is(':empty'))  &&  $("#box3").attr("value") ===  $("#box6").attr("value")  &&  ($("#box6").attr("value") ===  $("#box9").attr("value")) ){
 		winOrTie = true;
-		if (speechBubble !== null){
+		if (speechBubble !== null && speechBubbleModal !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
 			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
@@ -32,7 +32,7 @@ function checkIfWin(){
 		endTheGame();
 	} else if( !($('#box1').is(':empty'))  &&  $("#box1").attr("value") ===  $("#box2").attr("value")  &&  ($("#box2").attr("value") ===  $("#box3").attr("value")) ){
 		winOrTie = true;
-		if (speechBubble !== null){
+		if (speechBubble !== null && speechBubbleModal !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
 			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
@@ -41,7 +41,7 @@ function checkIfWin(){
 		endTheGame();
 	} else if( !($('#box4').is(':empty'))  &&  $("#box4").attr("value") ===  $("#box5").attr("value")  &&  ($("#box5").attr("value") ===  $("#box6").attr("value")) ){
 		winOrTie = true;
-		if (speechBubble !== null){
+		if (speechBubble !== null && speechBubbleModal !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
 			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
@@ -50,7 +50,7 @@ function checkIfWin(){
 		endTheGame();
 	} else if( !($('#box7').is(':empty'))  &&  $("#box7").attr("value") ===  $("#box8").attr("value")  &&  ($("#box8").attr("value") ===  $("#box9").attr("value")) ){
 		winOrTie = true;
-		if (speechBubble !== null){
+		if (speechBubble !== null && speechBubbleModal !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
 			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
@@ -59,7 +59,7 @@ function checkIfWin(){
 		endTheGame();
 	} else if( !($('#box1').is(':empty'))  &&  $("#box1").attr("value") ===  $("#box5").attr("value")  &&  ($("#box5").attr("value") ===  $("#box9").attr("value")) ){
 		winOrTie = true;
-		if (speechBubble !== null){
+		if (speechBubble !== null && speechBubbleModal !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
 			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
@@ -68,7 +68,7 @@ function checkIfWin(){
 		endTheGame();
 	} else if( !($('#box3').is(':empty'))  &&  $("#box3").attr("value") ===  $("#box5").attr("value")  &&  ($("#box5").attr("value") ===  $("#box7").attr("value")) ){
 		winOrTie = true;
-		if (speechBubble !== null){
+		if (speechBubble !== null && speechBubbleModal !== null){
 			speechBubble.parentNode.removeChild(speechBubble);
 			speechBubbleModal.parentNode.removeChild(speechBubbleModal);
 		}
