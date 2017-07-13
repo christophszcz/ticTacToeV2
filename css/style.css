@@ -1,5 +1,8 @@
 html{
-  border: 30px solid #705528;
+  border: 30px solid transparent;
+  -webkit-border-image: url(../images/oak-frame.jpg) 30 stretch;  /* Safari 3.1-5 */
+  -o-border-image: url(../images/oak-frame.jpg) 30 stretch; /* Opera 11-12.1 */
+  border-image: url(../images/oak-frame.jpg) 30 stretch;
   height: 100%;
 }
 
