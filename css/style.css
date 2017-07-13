@@ -62,6 +62,7 @@ body {
 }
 
 @media(max-width: 500px){
+  
   html, body {
     height: 100%;
   }
@@ -78,12 +79,10 @@ body {
     flex-direction: column;
   }
 
-  h2.title{
-    display: none;
-  }
   #speech-bubble-id {
     margin-top: 10px;
   }
+
   .box{
     font-size: 35px;
     width: 90px;
@@ -92,20 +91,24 @@ body {
 }
 
 @media(max-width: 400px){
+
   html{
     border: 20px solid transparent;
     -webkit-border-image: url(../images/oak-frame.jpg) 20 stretch;  /* Safari 3.1-5 */
     -o-border-image: url(../images/oak-frame.jpg) 20 stretch; /* Opera 11-12.1 */
     border-image: url(../images/oak-frame.jpg) 20 stretch;
   }
+
   .box{
     font-size: 28px;
     width: 80px;
     height: 80px;
   }
+
   .grid{
     margin-bottom: 5px;
   }
+
   .help-link{
     font-size: 12px;
   }
