@@ -1,3 +1,12 @@
+/* Font */
+
+@font-face{  
+  font-family:'chalk-font';  
+  src: url('../fonts/SqueakyChalkSound.ttf'); 
+}
+
+/* Entire Page */
+
 html{
   border: 30px solid transparent;
   -webkit-border-image: url(../images/oak-frame.jpg) 30 stretch;  /* Safari 3.1-5 */
@@ -128,10 +137,6 @@ body {
 #x-button, #y-button{
 	margin-left: 10px;
 	margin-right: 10px;
-}
-
-@font-face{  font-family:'chalk-font';  
-  src: url('../fonts/SqueakyChalkSound.ttf'); 
 }
 
 @media (min-width: 768px){
