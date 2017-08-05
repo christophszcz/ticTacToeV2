@@ -29,7 +29,8 @@ body {
 .grid {
   margin-top: 15px;
   margin-bottom: 20px;
-  cursor: pointer;
+ /* cursor: pointer;*/
+ cursor:url(../images/chalk.png), auto;
 }
 
 .row{
