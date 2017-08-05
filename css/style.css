@@ -29,7 +29,6 @@ body {
 .grid {
   margin-top: 15px;
   margin-bottom: 20px;
- /* cursor: pointer;*/
  cursor:url(../images/chalk.png), auto;
 }
 
@@ -116,11 +115,7 @@ body {
   }
 
   .grid{
-    margin-bottom: 5px;
-  }
-
-  .help-link{
-    font-size: 12px;
+    margin-bottom: 25px;
   }
 }
 
@@ -186,6 +181,7 @@ body {
     padding: 13px;
   }
 }
+
 /* Help Modal */
 
 .game-info{
