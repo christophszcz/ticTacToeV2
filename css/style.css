@@ -70,6 +70,8 @@ body {
   text-decoration: none;
 }
 
+/* < 500px Screen Size Media Queries */
+
 @media(max-width: 500px){
   
   html, body {
@@ -119,28 +121,6 @@ body {
   }
 }
 
-/* Starting Modal */
-
-.modal-body{
-  display: flex;
-  justify-content: center;
-}
-
-.modal-title{
-	text-align: center;
-}
-
-#x-button, #y-button{
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-@media (min-width: 768px){
-  .modal-dialog {
-    width: 345px;
-  }
-}
-
 /* Speech Bubble */
 
 .speech-container{
@@ -176,6 +156,8 @@ body {
   opacity: .3;
 }
 
+/* Speech Bubble Media Query */
+
 @media(max-width: 400px){
   .speech-bubble{
     padding: 13px;
@@ -196,6 +178,30 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #fff;
+}
+
+/* Starting Modal */
+
+.modal-body{
+  display: flex;
+  justify-content: center;
+}
+
+.modal-title{
+  text-align: center;
+}
+
+#x-button, #y-button{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Starting Modal Media Query */
+
+@media (min-width: 768px){
+  .modal-dialog {
+    width: 345px;
+  }
 }
 
 /* Help Modal */
@@ -219,6 +225,8 @@ body {
 .o-mark{
   color: #f0ad4e;
 }
+
+/* Help Modal Media Queries */
 
 @media (max-width: 500px){
   #speech-bubble-id{
