@@ -180,6 +180,14 @@ body {
   color: #fff;
 }
 
+/* Dev Info Media Queries */
+
+@media(max-width: 500px){
+  .dev-info{
+    top: 30px;
+  }
+}
+
 /* Starting Modal */
 
 .modal-body{
