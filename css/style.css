@@ -182,6 +182,22 @@ body {
   }
 }
 
+/* Dev Info */
+
+.dev-info{
+  font-family: 'chalk-font';
+  font-size: 14px;
+  position: relative;
+  left: 10px;
+  color: #fff;
+}
+
+#website-link{
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
 /* Help Modal */
 
 .game-info{
