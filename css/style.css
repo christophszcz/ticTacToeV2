@@ -29,7 +29,7 @@ body {
 .grid {
   margin-top: 15px;
   margin-bottom: 20px;
- cursor:url(../images/chalk.png), auto;
+  cursor:url(../images/chalk.png), auto;
 }
 
 .row{
@@ -71,6 +71,20 @@ body {
 
 .help-link:hover{
   text-decoration: none;
+}
+
+/* < 550px Screen Size Media Queries */
+
+@media(max-width: 550px){
+  .help{
+    bottom: 65px;
+    margin: auto;
+  }
+  .dev-info {
+    font-size: 13px;
+    bottom: 38px;
+    left: 40px;
+  }
 }
 
 /* < 500px Screen Size Media Queries */
@@ -182,14 +196,6 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #fff;
-}
-
-/* Dev Info Media Query */
-
-@media(max-width: 500px){
-  .dev-info{
-    top: 30px;
-  }
 }
 
 /* Starting Modal */
