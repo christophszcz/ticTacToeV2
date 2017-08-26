@@ -56,6 +56,9 @@ body {
 
 .help{
   text-align: right;
+  position: fixed;
+  bottom: 40px;
+  right: 45px;
 }
 
 .help-link{
@@ -169,8 +172,9 @@ body {
 .dev-info{
   font-family: 'chalk-font';
   font-size: 14px;
-  position: relative;
-  left: 10px;
+  position: fixed;
+  bottom: 40px;
+  left: 45px;
   color: #fff;
 }
 
@@ -180,7 +184,7 @@ body {
   color: #fff;
 }
 
-/* Dev Info Media Queries */
+/* Dev Info Media Query */
 
 @media(max-width: 500px){
   .dev-info{
