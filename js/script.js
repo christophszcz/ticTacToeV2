@@ -145,6 +145,11 @@ var Computer = {
 	'turn' : false
 };
 
+//Radom Starting Point
+var radomNumberGroup = [1,9];
+var randomNumber = radomNumberGroup[Math.floor(Math.random() * 2)];
+randomNumber == 1 ? otherNumber = 9 : otherNumber = 1;
+
 //Computer's turn
 function computersTurn(){
 	User.turn = false;

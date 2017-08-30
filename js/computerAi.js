@@ -3,9 +3,6 @@
 function computerMove(){
 	if(Computer.turn && winOrTie === false){
 		changeInput();
-		var radomNumberGroup = [1,9]
-		var randomNumber = radomNumberGroup[Math.floor(Math.random() * 2)];
-		randomNumber == 1 ? otherNumber = 9 : otherNumber = 1;
 
 		for (var i = 1; i < 10; i += 3){ //Block or create a win in a horizontal row 
 			if (!($("#box" + i).is(':empty'))  && !($("#box" + (i + 1)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
@@ -158,35 +155,11 @@ function computerMove(){
 			 	$( "#box" + otherNumber ).append(Computer.selection);
 			 	checkIfWin();
 			 	console.log('Box' + otherNumber);
+			 	console.log('wtf');
 			}, 1000);
 			$( "#box" + otherNumber).attr("value", Computer.selection);
 			checkIfWin();	
 		} 
-		// else if ($('#box5').is(':empty') && Computer.turn === true && $("#box5").attr("value").length < 1 ){
-		// 	setTimeout(function() {
-		// 	 	$( "#box5" ).append(Computer.selection);
-		// 	 	checkIfWin();
-		// 	 	console.log('Box5');
-		// 	}, 1000);
-		// 	$( "#box5" ).attr("value", Computer.selection);
-		// 	checkIfWin();  
-		// } else if ($('#box8').is(':empty') && Computer.turn === true && $("#box8").attr("value").length < 1 ){
-		// 	setTimeout(function() {
-		// 	 	$( "#box8" ).append(Computer.selection);
-		// 	 	checkIfWin();
-		// 	 	console.log('Box8');
-		// 	}, 1000);
-		// 	$( "#box8" ).attr("value", Computer.selection);
-		// 	checkIfWin();
-		// } else if ($('#box6').is(':empty') && Computer.turn === true && $("#box6").attr("value").length < 1 ){
-		// 	setTimeout(function() {
-		// 	 	$( "#box6" ).append(Computer.selection);
-		// 	 	checkIfWin();
-		// 	 	console.log('Box6');
-		// 	}, 1000);
-		// 	$( "#box6" ).attr("value", Computer.selection);
-		// 	checkIfWin(); 
-		// }
 	}
 };
 
