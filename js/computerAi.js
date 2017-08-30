@@ -72,6 +72,33 @@ function computerMove(){
 			}		 
 		}
 
+		// Forward diagonal win for computer  
+		if ( !($("#box3").is(':empty'))  && !($("#box5").is(':empty')) && ($("#box3").attr("value") ===  $("#box5").attr("value")) && $("#box7").is(':empty') && Computer.selection === $("#box3").attr("value")){
+			setTimeout(function() {
+		  	$( "#box7").append(Computer.selection);
+		  	console.log('Block win in a forwarddiagonal-last on the last entry');	
+			}, 1000);
+			$( "#box7").attr("value", Computer.selection);
+			checkIfWin();
+			return;
+		} else if ( !($("#box3").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box3").attr("value") ===  $("#box7").attr("value")) && $("#box5").is(':empty') && Computer.selection === $("#box3").attr("value") ){
+			setTimeout(function() {
+		  	$( "#box5").append(Computer.selection);
+		  	console.log('Block win in a forward diagonal on the middle entry');	
+			}, 1000);
+			$( "#box5").attr("value", Computer.selection);
+			checkIfWin();
+			return; 
+		} else if ( !($("#box5").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box5").attr("value") ===  $("#box7").attr("value")) && $("#box3").is(':empty') && Computer.selection === $("#box5").attr("value") ){
+			setTimeout(function() {
+		  	$( "#box3").append(Computer.selection);
+		  	console.log('Block win in a forward diagonal on the first entry');	
+			}, 1000);
+			$( "#box3").attr("value", Computer.selection);
+			checkIfWin();
+			return;
+		}
+
 		for (var i = 1; i < 10; i += 3){ //Block or create a win in a horizontal row 
 			if (!($("#box" + i).is(':empty'))  && !($("#box" + (i + 1)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
 				if ($("#box" + (i + 2)).is(':empty')){
