@@ -3,6 +3,9 @@
 function computerMove(){
 	if(Computer.turn && winOrTie === false){
 		changeInput();
+		var radomNumberGroup = [1,3,7,9]
+		var randomNumber = radomNumberGroup[Math.floor(Math.random() * 4)];
+		console.log(randomNumber); 
 
 		for (var i = 1; i < 10; i += 3){ //Block or create a win in a horizontal row 
 			if (!($("#box" + i).is(':empty'))  && !($("#box" + (i + 1)).is(':empty')) && ($("#box" + i).attr("value") ===  $("#box" + (i + 1)).attr("value")) ){
