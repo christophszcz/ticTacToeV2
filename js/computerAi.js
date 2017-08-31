@@ -282,7 +282,7 @@ function computerMove(){
 			checkIfWin();	
 		} 
 	}
-};
+}
 
 function changeInput(){
 	setTimeout(function() {
