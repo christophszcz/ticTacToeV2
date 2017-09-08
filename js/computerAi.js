@@ -1,4 +1,4 @@
-//A.I. Algorithm
+//Computer Strategy Algorithm
 
 function computerMove(){
 	if(Computer.turn && winOrTie === false){
@@ -29,7 +29,7 @@ function computerMove(){
 				if ($("#box" + a).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + a).append(Computer.selection);
-				  	console.log('Win in a horizontal row -spot1 ');
+				  	console.log('Win in a horizontal row -spot 1 ');
 					}, 1000);
 					$( "#box" + a).attr("value", Computer.selection);
 					checkIfWin();
@@ -76,7 +76,8 @@ function computerMove(){
 		if ( !($("#box3").is(':empty'))  && !($("#box5").is(':empty')) && ($("#box3").attr("value") ===  $("#box5").attr("value")) && $("#box7").is(':empty') && Computer.selection === $("#box3").attr("value")){
 			setTimeout(function() {
 		  	$( "#box7").append(Computer.selection);
-		  	console.log('Block win in a forwarddiagonal-last on the last entry');	
+		  	console.log('Block win in a forward diagonal on the last entry');	
+		  	checkIfWin();
 			}, 1000);
 			$( "#box7").attr("value", Computer.selection);
 			checkIfWin();
@@ -84,7 +85,8 @@ function computerMove(){
 		} else if ( !($("#box3").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box3").attr("value") ===  $("#box7").attr("value")) && $("#box5").is(':empty') && Computer.selection === $("#box3").attr("value") ){
 			setTimeout(function() {
 		  	$( "#box5").append(Computer.selection);
-		  	console.log('Block win in a forward diagonal on the middle entry');	
+		  	console.log('Block win in a forward diagonal on the middle entry');
+		  	checkIfWin();	
 			}, 1000);
 			$( "#box5").attr("value", Computer.selection);
 			checkIfWin();
@@ -92,7 +94,8 @@ function computerMove(){
 		} else if ( !($("#box5").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box5").attr("value") ===  $("#box7").attr("value")) && $("#box3").is(':empty') && Computer.selection === $("#box5").attr("value") ){
 			setTimeout(function() {
 		  	$( "#box3").append(Computer.selection);
-		  	console.log('Block win in a forward diagonal on the first entry');	
+		  	console.log('Block win in a forward diagonal on the first entry');
+		  	checkIfWin();	
 			}, 1000);
 			$( "#box3").attr("value", Computer.selection);
 			checkIfWin();
@@ -103,7 +106,8 @@ function computerMove(){
 		if ( !($("#box1").is(':empty'))  && !($("#box5").is(':empty')) && ($("#box1").attr("value") ===  $("#box5").attr("value")) && $("#box9").is(':empty') && Computer.selection === $("#box1").attr("value") ){
 			setTimeout(function() {
 		  	$( "#box9").append(Computer.selection);
-		  	console.log('Block win in a backward diagonal-last on the last entry');	
+		  	console.log('Block win in a backward diagonal on the last entry');	
+		  	checkIfWin();
 			}, 1000);
 			$( "#box9").attr("value", Computer.selection);
 			checkIfWin();
@@ -111,7 +115,8 @@ function computerMove(){
 		} else if ( !($("#box1").is(':empty'))  && !($("#box9").is(':empty')) && ($("#box1").attr("value") ===  $("#box9").attr("value")) && $("#box5").is(':empty') && Computer.selection === $("#box1").attr("value") ){
 			setTimeout(function() {
 		  	$( "#box5").append(Computer.selection);
-		  	console.log('Block win in a backward diagonal on the middle entry');	
+		  	console.log('Block win in a backward diagonal on the middle entry');
+		  	checkIfWin();	
 			}, 1000);
 			$( "#box5").attr("value", Computer.selection);
 			checkIfWin();
@@ -120,6 +125,7 @@ function computerMove(){
 			setTimeout(function() {
 		  	$( "#box1").append(Computer.selection);
 		  	console.log('Block win in a backward diagonal on the first entry');	
+		  	checkIfWin();
 			}, 1000);
 			$( "#box1").attr("value", Computer.selection);
 			checkIfWin();
@@ -131,7 +137,8 @@ function computerMove(){
 				if ($("#box" + (i + 2)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (i + 2) ).append(Computer.selection);
-				  	console.log('Block win in a horizontal row -spot3 ');	
+				  	console.log('Block win in a horizontal row -spot 3 ');
+				  	checkIfWin();	
 					}, 1000);
 					$( "#box" + (i + 2) ).attr("value", Computer.selection);
 					checkIfWin();
@@ -141,7 +148,8 @@ function computerMove(){
 				if ($("#box" + (i + 1)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (i + 1) ).append(Computer.selection);
-				  	console.log('Block win in a horizontal row -spot2 ');
+				  	console.log('Block win in a horizontal row -spot 2 ');
+				  	checkIfWin();
 					}, 1000);
 					$( "#box" + (i + 1) ).attr("value", Computer.selection);
 					checkIfWin();
@@ -151,7 +159,8 @@ function computerMove(){
 				if ($("#box" + i).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + i).append(Computer.selection);
-				  	console.log('Block win in a horizontal row -spot1 ');
+				  	console.log('Block win in a horizontal row -spot 1 ');
+				  	checkIfWin();
 					}, 1000);
 					$( "#box" + i).attr("value", Computer.selection);
 					checkIfWin();
@@ -166,6 +175,7 @@ function computerMove(){
 					setTimeout(function() {
 				  	$( "#box" + (j + 6) ).append(Computer.selection);
 				  	console.log('Block win in a vertical row- spot 3 ');
+				  	checkIfWin();
 					}, 1000);
 					$( "#box" + (j + 6) ).attr("value", Computer.selection);
 					checkIfWin();
@@ -176,6 +186,7 @@ function computerMove(){
 					setTimeout(function() {
 				  	$( "#box" + (j + 3) ).append(Computer.selection);
 				  	console.log('Block win in a vertical row- spot middle');
+				  	checkIfWin();
 					}, 1000);
 					$( "#box" + (j + 3) ).attr("value", Computer.selection);
 					checkIfWin();
@@ -186,6 +197,7 @@ function computerMove(){
 					setTimeout(function() {
 				  	$( "#box" + j).append(Computer.selection);
 				  	console.log('Block win in a vertical row- spot 1');
+				  	checkIfWin();
 					}, 1000);
 					$( "#box" + j).attr("value", Computer.selection);
 					checkIfWin();
@@ -198,7 +210,8 @@ function computerMove(){
 		if ( !($("#box3").is(':empty'))  && !($("#box5").is(':empty')) && ($("#box3").attr("value") ===  $("#box5").attr("value")) && $("#box7").is(':empty') ){
 			setTimeout(function() {
 		  	$( "#box7").append(Computer.selection);
-		  	console.log('Block win in a forwarddiagonal-last on the last entry');	
+		  	console.log('Block win in a forward diagonal on the last entry');
+		  	checkIfWin();	
 			}, 1000);
 			$( "#box7").attr("value", Computer.selection);
 			checkIfWin();
@@ -206,7 +219,8 @@ function computerMove(){
 		} else if ( !($("#box3").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box3").attr("value") ===  $("#box7").attr("value")) && $("#box5").is(':empty') ){
 			setTimeout(function() {
 		  	$( "#box5").append(Computer.selection);
-		  	console.log('Block win in a forward diagonal on the middle entry');	
+		  	console.log('Block win in a forward diagonal on the middle entry');
+		  	checkIfWin();	
 			}, 1000);
 			$( "#box5").attr("value", Computer.selection);
 			checkIfWin();
@@ -214,7 +228,8 @@ function computerMove(){
 		} else if ( !($("#box5").is(':empty'))  && !($("#box7").is(':empty')) && ($("#box5").attr("value") ===  $("#box7").attr("value")) && $("#box3").is(':empty') ){
 			setTimeout(function() {
 		  	$( "#box3").append(Computer.selection);
-		  	console.log('Block win in a forward diagonal on the first entry');	
+		  	console.log('Block win in a forward diagonal on the first entry');
+		  	checkIfWin();	
 			}, 1000);
 			$( "#box3").attr("value", Computer.selection);
 			checkIfWin();
@@ -225,7 +240,8 @@ function computerMove(){
 		if ( !($("#box1").is(':empty'))  && !($("#box5").is(':empty')) && ($("#box1").attr("value") ===  $("#box5").attr("value")) && $("#box9").is(':empty') ){
 			setTimeout(function() {
 		  	$( "#box9").append(Computer.selection);
-		  	console.log('Block win in a backward diagonal-last on the last entry');	
+		  	console.log('Block win in a backward diagonal on the last entry');	
+		  	checkIfWin();
 			}, 1000);
 			$( "#box9").attr("value", Computer.selection);
 			checkIfWin();
@@ -233,7 +249,8 @@ function computerMove(){
 		} else if ( !($("#box1").is(':empty'))  && !($("#box9").is(':empty')) && ($("#box1").attr("value") ===  $("#box9").attr("value")) && $("#box5").is(':empty') ){
 			setTimeout(function() {
 		  	$( "#box5").append(Computer.selection);
-		  	console.log('Block win in a backward diagonal on the middle entry');	
+		  	console.log('Block win in a backward diagonal on the middle entry');
+		  	checkIfWin();	
 			}, 1000);
 			$( "#box5").attr("value", Computer.selection);
 			checkIfWin();
@@ -242,6 +259,7 @@ function computerMove(){
 			setTimeout(function() {
 		  	$( "#box1").append(Computer.selection);
 		  	console.log('Block win in a backward diagonal on the first entry');	
+		  	checkIfWin();
 			}, 1000);
 			$( "#box1").attr("value", Computer.selection);
 			checkIfWin();
