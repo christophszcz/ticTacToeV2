@@ -9,30 +9,30 @@ function computerMove(){
 				if ($("#box" + (a + 2)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (a + 2) ).append(Computer.selection);
+				  	checkIfWin();
 				  	console.log('Win in a horizontal row -spot3 ');	
 					}, 1000);
 					$( "#box" + (a + 2) ).attr("value", Computer.selection);
-					checkIfWin();
 					return;
 				}
 			} else if (!($("#box" + a).is(':empty'))  && !($("#box" + (a + 2)).is(':empty')) && ($("#box" + a).attr("value") ===  $("#box" + (a + 2)).attr("value")) && (Computer.selection === $("#box" + a).attr("value")) ){
 				if ($("#box" + (a + 1)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (a + 1) ).append(Computer.selection);
+				  	checkIfWin();
 				  	console.log('Win in a horizontal row -spot2 ');
 					}, 1000);
 					$( "#box" + (a + 1) ).attr("value", Computer.selection);
-					checkIfWin();
 					return;
 				}
 			} else if (!($("#box" + (a + 1)).is(':empty'))  && !($("#box" + a + 2).is(':empty')) && ($("#box" + (a + 1)).attr("value") ===  $("#box" + (a + 2)).attr("value")) && (Computer.selection === $("#box" + (a + 1)).attr("value")) ){
 				if ($("#box" + a).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + a).append(Computer.selection);
+				  	checkIfWin();
 				  	console.log('Win in a horizontal row -spot 1 ');
 					}, 1000);
 					$( "#box" + a).attr("value", Computer.selection);
-					checkIfWin();
 					return;
 				}
 			} 
@@ -43,8 +43,8 @@ function computerMove(){
 				if ($("#box" + (b + 6)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (b + 6) ).append(Computer.selection);
-				  	console.log('Win in a vertical row- spot 3 ');
 				  	checkIfWin();
+				  	console.log('Win in a vertical row- spot 3 ');
 					}, 1000);
 					$( "#box" + (b + 6) ).attr("value", Computer.selection);
 					return;
@@ -53,8 +53,8 @@ function computerMove(){
 				if ($("#box" + (b + 3)).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + (b + 3) ).append(Computer.selection);
-				  	console.log('Win in a vertical row- spot middle');
 				  	checkIfWin();
+				  	console.log('Win in a vertical row- spot middle');
 					}, 1000);
 					$( "#box" + (b + 3) ).attr("value", Computer.selection);
 					return;
@@ -63,8 +63,8 @@ function computerMove(){
 				if ($("#box" + b).is(':empty')){
 					setTimeout(function() {
 				  	$( "#box" + b).append(Computer.selection);
-				  	console.log('Win in a vertical row- spot 1');
 				  	checkIfWin();
+				  	console.log('Win in a vertical row- spot 1');
 					}, 1000);
 					$( "#box" + b).attr("value", Computer.selection);
 					return;
