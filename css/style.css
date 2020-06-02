@@ -76,10 +76,19 @@ body {
 /* < 550px Screen Size Media Queries */
 
 @media(max-width: 550px) {
-  .help{
+  .grid {
+    margin-bottom: 55px;
+  }
+
+  .help {
     bottom: 65px;
     margin: auto;
   }
+
+  .help .help-link {
+    font-size: 18px;
+  }
+
   .dev-info {
     font-size: 13px;
     bottom: 38px;
@@ -132,8 +141,8 @@ body {
     height: 80px;
   }
 
-  .grid{
-    margin-bottom: 25px;
+  .grid {
+    margin-bottom: 35px;
   }
 }
 
