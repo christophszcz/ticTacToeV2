@@ -1,8 +1,8 @@
 /* Font */
 
-@font-face{  
-  font-family:'chalk-font';  
-  src: url('../fonts/SqueakyChalkSound.ttf'); 
+@font-face {
+  font-family:'chalk-font';
+  src: url('../fonts/SqueakyChalkSound.ttf');
 }
 
 /* Entire Page */
@@ -41,12 +41,12 @@ body {
 .box {
   font-size: 50px;
   text-align: center;
-  padding: 25px;
+  padding: 15px;
   border: 1px solid #fff;
-  height: 110px;
+  height: 95px;
   font-family: 'chalk-font';
   color: #fff;
-  width: 100px;
+  width: 95px;
 }
 
 .col-md-4{
@@ -75,7 +75,7 @@ body {
 
 /* < 550px Screen Size Media Queries */
 
-@media(max-width: 550px){
+@media(max-width: 550px) {
   .help{
     bottom: 65px;
     margin: auto;
@@ -89,8 +89,7 @@ body {
 
 /* < 500px Screen Size Media Queries */
 
-@media(max-width: 500px){
-  
+@media(max-width: 500px) {
   html, body {
     height: 100%;
   }
@@ -150,7 +149,7 @@ body {
   color: #000;
   background-color: #fff;
   position:relative;
-  padding:15px;
+  padding: 8px;
   margin-left: 20px;
   margin-right: 20px;
   -webkit-border-radius:15px;
@@ -159,11 +158,11 @@ body {
   display:none;
 }
 
-#bubble-text{
+#bubble-text {
   display:inline-block;
 }
 
-#x{
+#x {
   cursor:pointer;
   display: inline;
   font-size: 21px;
@@ -175,8 +174,8 @@ body {
 
 /* Speech Bubble Media Query */
 
-@media(max-width: 400px){
-  .speech-bubble{
+@media(max-width: 400px) {
+  .speech-bubble {
     padding: 13px;
   }
 }
