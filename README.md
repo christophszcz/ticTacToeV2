@@ -4,4 +4,4 @@
 
 ![readme-gif](./video/xo.gif)
 
-This is a fully functional chalkboard tic-tac-toe game that randomly chooses whether you or the computer goes first. It contains a custom designed computer algorithm that plays the counter-attack or corner strategy.
+This is a fully functional chalkboard tic-tac-toe game that randomly chooses the first player. It contains a custom designed algorithm that plays the counter-attack or corner strategy
